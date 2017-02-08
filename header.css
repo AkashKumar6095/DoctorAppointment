@@ -1,0 +1,241 @@
+#header
+		{
+			float: left;
+			width: 98%;
+			background-color: #303030;
+			padding: 10px 1%;
+		}
+#midWrap
+		{
+			margin: auto;
+			max-width: 1200px;
+		}
+#nav 
+		{
+			float: left;
+			width: 98%;
+			padding: 0 1%;
+		}
+#nav ul
+		{
+			float: right;
+		}
+#nav ul li
+		{
+			float: left;
+		}
+#nav ul li a
+		{
+			float: left;
+			padding: 10px 20px;
+			color: #fff;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+#nav ul li:last-child
+		{
+			background-color: #449C45;
+			border-radius: 5px;
+			-o-border-radius: 5px;
+			-ms-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		}
+.mobMenu
+	{
+		float: left;
+		width: 98%;
+		padding: 0 1%;
+	}
+.mobileUl 
+	{
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+.mobileUl li 
+	{
+		float: left;
+	}
+.home a
+	{
+		float: right;
+		width: 35px;
+		height: 22px;
+		background-image: url(../images/menu-icon.png);
+	}
+.tabWrap
+		{
+			float: left;
+			width: 100%;
+			display: none;
+		}
+
+
+
+
+
+.main3
+	{
+		float: left;
+		width: 100%;
+		background-color: rgba(0,0,0,0.8);
+		position: fixed;
+		top: 0;
+		z-index: 999;
+		height: 100%;
+		display: none;
+	}
+.midWrap3
+	{
+		max-width: 450px;
+		margin: auto;
+	}
+.wrapper3
+	{
+		float: left;
+		width: calc(100% - 22px);
+		border: solid 1px #666;
+		padding: 10px 10px 30px 0;
+		border-radius: 5px;
+		margin: 5% 0 8% 0;
+		background-color: #fff;
+		overflow: scroll;
+		max-height: 480px;
+	}
+.login 
+	{
+		float: left;
+		width: 100%;
+	}
+.topic 
+	{
+		float: left;
+		width: 98%;
+		margin: 0;
+		padding: 0 0 0 2% !important;
+		list-style: none;
+	}
+.topic li 
+	{
+		float: left;
+		margin: 0 20px 0 0;
+		padding: 0 0 5px 0;
+		font-size: 15px;
+		font-weight: bold;
+		color: #666;
+		cursor: pointer;
+	}
+.topic li:hover, .active
+	{
+		color: #000 !important;
+		border-bottom: solid 2px #FF3C3C;
+	}
+.cross 
+	{
+		float: right !important;
+		width: 15px;
+		border-bottom: none !important;
+		margin: 0 !important;
+	}
+.cross span
+	{
+		float: left;
+		background-image: url(../images/cancel.png);
+		width: 15px;
+		height: 15px;
+		cursor: pointer;
+	}
+.details 
+	{
+		float: left;
+		width: 94%;
+		margin: 20px 0 0 0;
+		padding: 0 3%;
+	}
+.details form 
+	{
+		float: left;
+		width: 100%;
+	}
+.formtype 
+	{
+		float: left;
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+.formtype li 
+	{
+		float: left;
+		width: 100%;
+	}
+.formtype label
+	{
+		float: left;
+		width: 100%;
+		margin: 5px 0 10px 0;
+	}
+.formtype label input 
+	{
+		border: solid 1px #666;
+		width: 96%;
+		padding: 2%;
+		margin: 5px 0;
+		border-radius: 5px;
+	}
+.check label
+	{
+		float: left;
+		width: 42% !important;
+		margin: 0 !important;
+		font-size: 12px !important;
+	}
+.check label input 
+	{
+		float: left;
+		width: 10px !important;
+		margin: 1px 8px 0 0 !important;
+	}
+.check a, .check2 a, .submitb a, .submitp a
+	{
+		float: right;
+		text-decoration: none;
+		font-size: 12px;
+		color: #FF3C3C !important;
+		font-weight: bold;
+	}
+.submitb, .submitp
+	{
+		margin: 20px 0 30px 0 !important;
+		display: block;
+		text-align: center;
+	}
+.submitp 
+	{
+		font-size: 12px !important;
+	}
+.submitb input
+	{
+		display: inline-block;
+		float: none;
+		padding: 2px 30px;
+		border-radius: 5px;
+		background-color: #ff3c3c !important;
+		font-size: 18px;
+		cursor: pointer;
+	}
+.submitb a 
+	{
+		display: inline-block !important;
+		float: none;
+		font-size: 14px;
+	}
+.submitp a
+	{
+		font-size: 12px !important;
+		float: none;
+	}

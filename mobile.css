@@ -1,0 +1,239 @@
+@media screen and (max-width: 1050px) {
+    .bodyWrap {
+        width: 96%;
+        padding: 4% 2%;
+    }
+}
+@media screen and (max-width: 1050px) {
+    p {
+        font-size: 18px !important;
+        margin: 7px 0 !important;
+    }
+}
+@media screen and (max-width: 770px) {
+    p {
+        font-size: 13px !important;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 370px) {
+    p {
+        font-size: 12px !important;
+        font-weight: normal;
+    }
+}
+@media screen and (max-width: 480px) {
+    .details {
+        height: 130px !important;
+    }
+}
+@media screen and (max-width: 370px) {
+    .details {
+        padding: 0 0 0 2px !important;
+        width: calc(100% - 2px) !important;
+    }
+}
+@media screen and (max-width: 1050px) {
+    label, select {
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 1050px) {
+    	.formBox {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 1050px) {
+    	.bottom {
+       width: 100%;
+       margin: 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    	.profilepic {
+       width: 200px;
+       height: 200px;
+       margin: auto;
+       float: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    	.details {
+       margin: 20px 0 0 0;
+       width: calc(100% - 15px);
+    }
+}
+@media screen and (max-width: 700px) {
+    	.formBox {
+       width: 100%;
+    }
+}
+@media screen and (max-width: 480px) {
+    	.formBox p {
+       text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    	label {
+       text-align: center !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    	input {
+       width: 60% !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    	input {
+       width: 99% !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    	select {
+       width: 61.5% !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    	select {
+       width: 100% !important;
+       padding: 10px 1%;
+    }
+}
+@media screen and (max-width: 600px) {
+    	.submit li {
+       margin: 0 5px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    	.submit .red {
+       margin: 0 18px 0 0 !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    	.submit {
+       text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    p {
+        font-size: 11px !important;
+        margin: 2px 0 !important;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .newclick {
+        width: 27% !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .newclick {
+        width: 36% !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .newclick {
+        width: 170px !important;
+    }
+}
+@media screen and (max-width: 480px) {
+    .click input {
+        width: 25px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .submit .green input {
+        width: 188px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .submit input {
+        width: 150px !important;
+    }
+}
+@media screen and (max-width: 1200px) {
+   .tableWrap table tr {
+        display: block;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1200px) {
+   .tableWrap table tr td {
+        display: inline-block !important;
+        float: none !important;
+        margin: 3px 1.5px !important;
+    }
+}
+@media screen and (max-width: 800px) {
+   .tableWrap table tr td {
+        width: 121px !important;
+        height: 121px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+   .tableWrap table tr td p {
+        font-size: 11px !important;
+        line-height: 18px !important;
+    }
+}
+@media screen and (max-width: 768px) {
+   .tableWrap table tr td a {
+        font-size: 11px !important;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .ribbon p, .leftribbon span {
+        font-size: 18px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .ribbon p{
+        text-align: left !important;
+        padding: 0 0 0 10px;
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .leftribbon span{
+        padding: 2px 0 0 0;
+        font-size: 14px !important;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .leftribbon a {
+        margin: 2px 5px !important;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .ribbon	{
+        padding: 15px 0 !important;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .leftribbon	{
+        margin: 0 12px !important;
+    }
+}
+@media screen and (max-width: 700px) {
+    .appointdate table tr a, .appointdate table tr p{
+        font-size: 11px !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .appointdate table tr {
+        display: block !important;
+        text-align: center !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .appointdate table tr td{
+        display: inline-block !important;
+        width: 49%;
+        border-bottom: solid 4px #fff;	
+    }
+}.contactus select 
+@media screen and (max-width: 600px) {
+    .appointdate table tr {
+        display: block !important;
+        text-align: center !important;
+    }
+}

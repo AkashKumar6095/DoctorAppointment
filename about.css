@@ -1,0 +1,128 @@
+body 
+	{
+		margin: 0;
+		font-family: 'Open Sans', sans-serif;
+	}
+.main 
+	{
+		float: left;
+		width: 100%;
+	}
+.headimg
+	{
+		margin: auto;
+		max-width: 1200px;
+	}
+.imgbox
+	{
+		float: left;
+		width: 100%;
+	}
+.imgbox img
+	{
+		float: left;
+		width: 100%;
+	}
+.midWrap 
+	{
+		max-width: 1200px;
+		margin: auto;
+	}
+.wrapper 
+	{
+		float: left;
+		width: 96%;
+		margin: 20px 2%;
+	}
+.topwrap 
+	{
+		float: left;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+.topwrap h1
+	{
+		float: left;
+		width: 100%;
+		font-family: cursive;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		display: block;
+		position: relative;
+		font-size: 36px;
+	}
+.topwrap span
+	{
+		width: 100px;
+		border-bottom: solid 2px #FFB900;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50px;
+		text-align: center;
+		margin: auto;
+	}
+.marquee 
+	{
+		float: left;
+		width: 100%;
+	}
+.marquee h2 
+	{
+		margin: 20px 0 0 0;
+		padding: 0;
+		text-align: center;
+		float: left;
+		width: 100%;
+		font-size: 30px;
+	}
+.bodyWrap 
+	{
+		float: left;
+		width: 100%;
+		margin: 30px 0;
+	}
+.para 
+	{
+		float: left;
+		width: 100%;
+	}
+.para p
+	{
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+		line-height: 23px;
+		text-align: justify;
+	}
+.headings 
+	{
+		float: left;
+		width: 100%;
+	}
+.headings h2
+	{
+		float: left;
+		width: 100%;
+		color: #2D55A4;
+		font-size: 26px;
+		margin: 20px 0;
+	}
+.para a 
+	{
+		text-decoration: none;
+		color: #2D55A4;
+		font-weight: bold;
+	}
+.para p span
+	{
+		float: left;
+		background-image: url(../images/arrow2.png);
+		width: 10px;
+		height: 15px;
+		margin: 4px 15px 0 15px;
+	}

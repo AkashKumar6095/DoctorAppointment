@@ -1,0 +1,91 @@
+body 
+	{
+		margin: 0;
+		font-family: 'Open Sans', sans-serif;
+	}
+.main 
+	{
+		float: left;
+		width: 100%;
+	}
+.midWrap 
+	{
+		max-width: 1200px;
+		margin: auto;
+	}
+.wrapper 
+	{
+		float: left;
+		width: 96%;
+		margin: 20px 2%;
+	}
+.topwrap 
+	{
+		float: left;
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+.topwrap h1
+	{
+		float: left;
+		width: 100%;
+		font-family: cursive;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+		display: block;
+		position: relative;
+		font-size: 36px;
+	}
+.topwrap span
+	{
+		width: 170px;
+		border-bottom: solid 2px #FFB900;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 50px;
+		text-align: center;
+		margin: auto;
+	}
+.bodyWrap 
+	{
+		float: left;
+		width: 100%;
+		margin: 30px 0;
+	}
+.para 
+	{
+		float: left;
+		width: 100%;
+	}
+.para p
+	{
+		float: left;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+		line-height: 23px;
+		text-align: justify;
+	}
+.headings 
+	{
+		float: left;
+		width: 100%;
+	}
+.headings h2
+	{
+		float: left;
+		width: 100%;
+		color: #2D55A4;
+		font-size: 26px;
+		margin: 20px 0;
+	}
+.para a 
+	{
+		text-decoration: none;
+		color: #2D55A4;
+		font-weight: bold;
+	}
