@@ -1,4 +1,13 @@
 <?php include('header.php');?>
+<?php
+if(isset($_GET['key']))
+{
+	$key=$_GET['key'];
+}else
+{
+	$key="";
+}
+?>
 <link rel="stylesheet" type="text/css" href="css/help.css">
 	<div class="main">
 		<div class="midWrap">
@@ -11,43 +20,44 @@
 						<h2 class="center">Can't find what you want? <a href="http://127.0.0.1/Doctor2/contact.php" title="">Contact Us</a></h2>
 					</div>
 					<div class="searchbox">
-						<form action="" method="" accept-charset="utf-8">
-							<input type="search" name="" value="" placeholder="Search Your Queries"><span>Search</span>
+						<form method="get" accept-charset="utf-8">
+							<input type="search" name="key" value="" placeholder="Search Your Queries"><span>Search</span>
 						</form>
 					</div>
 					<div class="faq">
 						FAQ's (Frequently Asked Questions)
 					</div>
+
+					<?php
+					$sql="SELECT * FROM `faq` WHERE `question` LIKE '%$key%' OR `answer` LIKE '%$key%'";
+					$res=mysqli_query($connection, $sql);
+					$count=mysqli_num_rows($res);
+					while($row=mysqli_fetch_assoc($res))
+					{
+						$question=$row['question'];
+						$answer=$row['answer'];
+					?>
 					<div class="headings">
-						<h2>How to book an appointment ?</h2>
+						<h2><?php echo $question;?></h2>
 					</div>
 					<div class="para">
 						<p>
-							If you are a new user, click on <a href="#" title="">Login/Register</a> button on the top right corner of the page. And then go to <a href="#" title=""> Register</a> option and fill the details and create your account. After that you can make an appointment with your nearest doctor/dentist.<br><br>
-							If you are Registered user, click on <a href="#" title="">Login</a> button on the top right corner of the page. And then go to login option (If not logged in) By entering your username and password. After that you can make an appointment with your nearest doctor/dentist.
+							<?php echo $answer;?>
 						</p>
 					</div>
+					<?php }?>
 
+					<?php
+					if($count<=0)
+					{
 
+					?>
 					<div class="headings">
-						<h2>Can't find a doctor close to your location ?</h2>
+						<h2 style="color:#f00;">No FAQ's Found</h2>
 					</div>
-					<div class="para">
-						<p>
-							<a href="http://127.0.0.1/Doctor2/contact.php" title="">Contact Us</a> and we will get back to you within 24 working hours.
-						</p>
-					</div>
+					<?php }?>
 
-
-					<div class="headings">
-						<h2>Having problem in logging into your account ?</h2>
-					</div>
-					<div class="para">
-						<p>
-							Go to <a href="#" title="">forgot password</a> and enter your details.
-
-						</p>
-					</div>
+					
 					
 
 
@@ -58,7 +68,7 @@
 						<p>
 							Enter your feedback:
 						</p>
-						<a href="C:\xampp\htdocs\Doctor2\feedback.php" title="Feedback" class="feedbackpop">Feedback</a>
+						<a href="file:///C:/Users/Rohit/Desktop/My%20Codings/Doctor%20Website/feedback.php" title="Feedback" class="feedbackpop">Feedback</a>
 					</div>
 
 
@@ -66,44 +76,44 @@
 		</div>
 	</div>
 
-	<div class="main2">
+	<div class="mainWrap feedbackOverlay">
 		<div class="midWrap2">
 			<div class="wrappers">
 				<div class="login">
-					<ul class="topic">
+					<ul class="topic2">
 						<li>Feedback</li>
 						<li class="cross"><span></span></a></li>
 					</ul>
 				</div>
 				<div class="details">
-					<form action="feedback_submit.php" method="post" accept-charset="utf-8">
-						<ul class="formtype">
+					<form action="" method="" accept-charset="utf-8">
+						<ul class="formtypefeed">
 							<li>
-								<label>Doctor's Name
-								<input type="text" name="docname_submit" value="" required="required"></label>
+								<label>Doctor's Name</label>
+								<input type="text" name="" value="" required="required">
 							</li>
 							<li>
-								<label>Patient's Name
-								<input type="text" name="patientname_submit" value="" required="required"></label>
+								<label>Patient's Name</label>
+								<input type="text" name="" value="" required="required">
 							</li>
 							<li>
-								<label>Date Visited
-								<input type="text" name="date_submit" value="" required="required"></label>
+								<label>Date Visited</label>
+								<input type="text" name="" value="" required="required">
 							</li>
 							<li>
-								<label>Location/Pincode
-								<input type="text" name="pincode_submit" value="" required="required"></label>
+								<label>Location/Pincode</label>
+								<input type="text" name="" value="" required="required">
 							</li>
 							<li>
-								<label>Health Problem
-								<input type="text" name="problem_submit" value="" required="required"></label>
+								<label>Health Problem</label>
+								<input type="text" name="" value="" required="required">
 							</li>
 							<li>
 								<label>Feedback (in detail)
-								<textarea name="details_submit" required="required"></textarea></label>
+								<textarea name="" required="required"></textarea></label>
 							</li>
 							<li class="submitbd">
-								<input type="submit" name="" value="Submit">
+								<input type="submit" name="Submit" value="Submit">
 							</li>
 						</ul>
 					</form>
@@ -113,10 +123,10 @@
 	</div>
 <script type="text/javascript">
 	$(document).on('click', '.feedbackpop', function() {
-		$('.main2').show();
+		$('.feedbackOverlay').show();
 	});
 	$(document).on('click', '.cross span', function() {
-		$('.main2').hide();
+		$('.feedbackOverlay').hide();
 	});
 </script>
 	<?php include('footer.php');?>
