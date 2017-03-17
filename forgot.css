@@ -1,0 +1,97 @@
+body 
+	{
+		font-family: arial;
+	}
+.mainWrapp
+	{
+		float: left;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 999;
+		height: 100%;
+	}
+.midWraps
+	{
+		max-width: 450px;
+		margin: auto;
+	}
+.wrapper3
+	{
+		float: left;
+		width: calc(100% - 22px);
+		border: solid 1px #666;
+		padding: 10px;
+		border-radius: 5px;
+		margin-top: 35%;
+		background-color: #fff;
+	}
+.details 
+	{
+		float: left;
+		width: 94%;
+		margin: 20px 0 0 0;
+		padding: 0 3%;
+	}
+.details form 
+	{
+		float: left;
+		width: 100%;
+	}
+.formtypetabs 
+	{
+		float: left;
+		width: 100%;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+.formtypetabs li 
+	{
+		float: left;
+		width: 100%;
+	}
+.inputtype label
+	{
+		float: left;
+		width: 100%;
+		margin: 20px 0 10px 0;
+		font-size: 14px;
+		font-weight: bold;
+	}
+.inputtype input 
+	{
+		border: solid 1px #666;
+		width: 96%;
+		padding: 2%;
+		margin: 20px 0;
+		border-radius: 5px;
+	}
+.submitbc
+	{
+		margin: 20px 0;
+		display: block;
+		text-align: center;
+	}
+.submitbc a
+	{
+		display: inline-block !important;
+		float: none;
+		font-size: 14px;
+		text-decoration: none;
+		color: #FF3C3C;
+		font-weight: bold;
+		margin: 0 15px 0 0;
+		padding-bottom: 20px;
+	}
+.submitbc input
+	{
+		display: inline-block;
+		float: none;
+		padding: 2px 20px;
+		border-radius: 5px;
+		background-color: #ff3c3c;
+		font-size: 18px;
+		cursor: pointer;
+		color: #fff;
+	}

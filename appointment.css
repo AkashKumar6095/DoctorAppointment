@@ -1,0 +1,196 @@
+body 
+	{
+		margin: 0;
+		background-color: #fff;
+		font-family: arial;
+	}
+.main 
+	{
+		float: left;
+		width: 100%;
+	}
+.midWrap 
+	{
+		max-width: 1200px;
+		margin: auto;
+	}
+.bodyWrap 
+	{
+		float: left;
+		width: 92%;
+		padding: 1% 4%;
+		background-color: #fff;
+	}
+.profile 
+	{
+		float: left;
+		width: 100%;
+	}
+.profilepic 
+	{
+		float: left;
+		width: 200px;
+	}
+.profilepic img 
+	{
+		float: left;
+		width: 100%;
+	}
+.details 
+	{
+		float: left;
+		width: calc(100% - 230px);
+		margin: 0 0 0 15px;
+		height: 200px !important;
+		padding: 0 0 0 15px;
+		background-color: #D0CCCD;
+	}
+.details h2
+	{
+		float: left;
+		width: 100%;
+		font-weight: normal;
+		margin: 8px 0;
+		font-size: 22px;
+	}
+.leftdetail, .leftdetail2 
+	{
+		float: left;
+		width: 20%;
+	}
+.leftdetail p, .leftdetail2 p
+	{
+		float: left;
+		width: 100%;
+		margin: 5px 0;
+		font-size: 14px;
+	}
+.leftdetail2 
+	{
+		float: left;
+		width: 80%;
+	}
+.Wrapper 
+	{
+		float: left;
+		width: 100%;
+		margin: 15px 0 0 0;
+	}
+.Wrapper form 
+	{
+		float: left;
+		width: 100%;
+	}
+.formBox 
+	{
+		float: left;
+		width: 65%;
+	}
+.formBox p
+	{
+		float: left;
+		width: 100%;
+		font-size: 18px;
+		margin: 10px 0 20px 0;
+	}
+.formBox span 
+	{
+		color: #A50300;
+		font-weight: bold;
+	}
+.formBox label
+	{
+		float: left;
+		width: 100%;
+		font-size: 18px;
+		padding: 10px 0;
+		line-height: 40px;
+	}
+.formBox label input, select
+	{
+		float: right;
+		width: 67%;
+		padding: 10px 0 10px 1%;
+		border: solid 1px #ccc;
+		font-size: 18px;
+	}
+.formBox label select 
+	{
+		width: 68.5%;
+	}
+.newclick 
+	{
+		width: 27% !important;
+	}
+.click 
+	{
+		float: left;
+		width: 16% !important;
+	}
+.click input 
+	{
+		float: left !important;
+		margin: 12px 0 0 0;
+	}
+.hidden 
+	{
+		display: none;
+	}
+.bottom 
+	{
+		float: left;
+		width: 86%;
+		margin: 0 14% 0 0;
+	}
+.submit 
+	{
+		float: left;
+		width: 100%;
+		margin: 20px 0;
+		padding: 0;
+		list-style: none;
+		text-align: right;
+		display: block;
+	}
+.submit li 
+	{
+		display: inline-block;
+		margin: 0 5px;
+		text-align: center;
+	}
+.submit li input
+	{
+		float: left;
+		padding: 9px 12px;
+		border-radius: 5px;
+		margin: 0;
+		font-family: arial;
+		font-size: 14px;
+		font-weight: bold;
+		border: none;
+		cursor: pointer;
+		font-size: 14px;
+	}
+.grey input 
+	{
+		background-color: #D0CCCD;
+		color: #CE0203;
+	}
+.submit li a
+	{
+		text-decoration: none;
+		float: left;
+		font-size: 14px;
+		font-weight: bold;
+		color: #fff;
+		background-color: #CE0203;
+		padding: 9px 40px;
+		text-align: center;
+		width: calc(100% - 80px);
+		border-radius: 5px;
+	}
+.green input 
+	{
+		background-color: #55AE58;
+		color: #fff;
+	}

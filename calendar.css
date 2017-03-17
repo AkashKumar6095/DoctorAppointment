@@ -1,0 +1,242 @@
+.calenderMainWrap
+		{
+			float: left;
+			width: 100%;
+		}
+.calenderHeading
+		{
+			float: left;
+			width: 98%;
+			text-align: center;
+			padding: 5px 1%;
+			background-color: #619C50;
+		}
+.calenderHeading time
+		{
+			float: left;
+			font-size: 20px;
+			margin: 0 20px;
+		}
+.calenderHeading .leftCalArrow, .calenderHeading .rightCalArrow
+		{
+			padding: 5px;
+			display: inline-block;
+			background-color: #000;
+			cursor: pointer;
+		}
+.calenderHeading .leftCalArrow::after, .calenderHeading .rightCalArrow::after
+		{
+			content: "";
+			width: 0;
+			height: 0;
+			float: left;
+			border-top: 5px solid transparent;
+			border-right: 10px solid #fff;
+			border-bottom: 5px solid transparent;
+		}
+.rightCalArrow::after
+		{
+			border-left: 10px solid #fff;
+			border-right: none !important;
+		}
+.calenderWrap
+		{
+			width: 100%;
+			border: 1px solid #ccc;
+			border-right: none;
+			border-bottom: none;
+			float: left;
+		}
+.calHeader
+		{
+			float: left;
+			width: 100%;
+			margin-bottom: 0;
+		}
+.calHeader li
+		{
+			float: left;
+			width: 13.28%;
+			border-right: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			background-color: #ebebeb;
+			font-weight: bold;
+			padding: 5px;
+			font-size: 14px;
+			text-align: center;
+		}
+
+.calDates 
+		{
+			float: left;
+			width: 100%;
+			margin-bottom: 0;
+		}
+.calDates li
+		{
+			position:relative;
+			float: left;
+			width: 13.28%;
+			border-right: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			padding: 5px;
+			font-size: 11px;
+			text-align: right;
+			height: 93px;
+		}
+.calDates li.disable
+{
+	background-color:#ebebeb;
+	color:#999;
+}
+.calenderSliderMain
+		{
+			float: left;
+			width: 100%;
+			overflow: hidden;
+		}
+.calenderSliderIneer
+		{
+			float: left;
+			width: 100%;
+		}
+
+
+
+.event_label
+{
+	float: left;
+	width:100%;
+	text-align: left;
+	z-index:9;
+	top: 25px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	-o-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.event_label.top_place
+{
+	top:20px;
+}
+.event_label.bottom_place
+{
+	bottom:2px;
+}
+.event_label .event_title
+{
+	float:left;
+	width:100%;
+	font-size:11px;
+	color:#333;
+	text-align:left;
+	font-weight:normal;
+	font-weight:600;
+	text-transform:capitalize;
+}
+.event_label .event_time
+{
+	float:left;
+	width:100%;
+	font-size:11px;
+	color:#333;
+	text-align:left;
+}
+.event_label_yellow
+{
+	background-color:#eccd73;
+}
+.event_label_green
+{
+	background-color:#619C50;
+	color: #fff;
+}
+.event_label_red
+{
+	background-color:#db5a3d;
+	color: #fff;
+}
+.event_label_red .event_title
+{
+	color:#fff;
+}
+.event_label_blue
+{
+	background-color:#52757b;
+}
+.event_label_blue .event_title
+{
+	color:#fff;
+}
+
+.more_event_tooltip
+{
+	position:absolute;
+	left:0;
+	bottom:105%;
+	width:250px;
+	padding:10px 5px;
+	background-color:#ccc;
+	border-radius:4px;
+	box-shadow:0 3px 10px -6px #333;
+	display:none;
+}
+.more_event_tooltip::before
+{
+	content:'';
+	position:absolute;
+	left:20px;
+	width:0;
+	height:0;
+	bottom:-10px;
+	border-left:10px solid transparent;
+	border-right:10px solid transparent;
+	border-top:10px solid #ccc;
+}
+.more_event_tooltip .event_label
+{
+	position:relative !important;
+	float:left;
+	left:0 !important;
+	width:92% !important;
+	margin-bottom:10px;
+}
+.more_event_trigger
+{
+	position:absolute;
+	left:5px;
+	top:5px;
+	color:#231F20;
+	font-size:10px;
+	cursor:pointer;
+}
+#selectemp
+{
+	background-color: #527857;
+	border:none;
+	border-radius: 4px;
+	color: #fff;
+}
+.arrowlink
+{
+	float: left;
+}
+.arrowlink:hover
+{
+	text-decoration: none;
+}
+.prev_date
+{
+	float: left;
+	width: 30px;
+	height: 30px;
+	background:#fff url(../images/left-arrow.png) no-repeat center center;
+}
+.next_date
+{
+	float: left;
+	width: 30px;
+	height: 30px;
+	background:#fff url(../images/right-arrow.png) no-repeat center center;
+}

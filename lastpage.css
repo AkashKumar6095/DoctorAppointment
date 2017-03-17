@@ -1,0 +1,142 @@
+body 
+	{
+		margin: 0;
+		font-family: arial;
+		background-color: #fff;
+	}
+.main 
+	{
+		float: left;
+		width: 100%;
+	}
+.midWrap 
+	{
+		max-width: 1200px;
+		margin: auto;
+	}
+.wrapper 
+	{
+		float: left;
+		width: 100%;
+		background-color: #fff;
+	}
+.bodyWrap 
+	{
+		float: left;
+		width: 92%;
+		padding: 1% 4%;
+		background-color: #fff;
+	}
+.profile 
+	{
+		float: left;
+		width: 100%;
+	}
+.profilepic 
+	{
+		float: left;
+		width: 200px;
+	}
+.profilepic img 
+	{
+		float: left;
+		width: 100%;
+	}
+.details 
+	{
+		float: left;
+		width: calc(100% - 230px);
+		margin: 0 0 0 15px;
+		height: 200px !important;
+		padding: 0 0 0 15px;
+		background-color: #D0CCCD;
+	}
+.details h2
+	{
+		float: left;
+		width: 100%;
+		font-weight: normal;
+		margin: 8px 0;
+		font-size: 22px;
+	}
+.leftdetail, .leftdetail2 
+	{
+		float: left;
+		width: 20%;
+	}
+.leftdetail p, .leftdetail2 p
+	{
+		float: left;
+		width: 100%;
+		margin: 5px 0;
+		font-size: 14px;
+	}
+.leftdetail2 
+	{
+		float: left;
+		width: 80%;
+	}
+.appoint 
+	{
+		float: left;
+		width: 100%;
+		margin: 10px 0;
+	}
+.appoint p
+	{
+		float: left;
+		margin: 0;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 22px;
+	}
+.appoint a
+	{
+		float: right;
+		text-decoration: none;
+		color: #000;
+		font-size: 18px;
+		font-weight: bold;
+	}
+.appointdate 
+	{
+		float: left;
+		width: 100%;
+	}
+.appointdate table 
+	{
+		float: left;
+		width: 100%;
+		border-collapse: collapse;
+	}
+.appointdate table tr 
+	{
+		width: 100%;
+		border-bottom: solid 3px #fff;
+	}
+.appointdate table tr td
+	{
+		background-color: #D3D3D3;
+		padding: 15px 0;
+	}
+.appointdate p
+	{
+		text-decoration: none;
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 15px !important;
+		line-height: 30px;
+	}
+.appointdate a 
+	{
+		text-decoration: none;
+		margin: 0 15px;
+		font-size: 12px;
+		font-weight: bold;
+		color: #6B6B6B;
+		letter-spacing: .2px;
+	}
+.available a
+	{
+		color: #5AB663;
+	}
