@@ -23,12 +23,12 @@
 
 							<div class="contact_form">
 								<label>E-mail<span>*</span></label>
-								<input type="text" name="email_submit" value="" required="required">
+								<input type="email" name="email_submit" value="" required="required">
 							</div>
 
 							<div class="contact_form">
 								<label>Phone<span>*</span></label>
-								<input type="text" name="phone_submit" value="" required="required">
+								<input type="text" name="phone_submit" pattern="[789][0-9]{9}" value="" required="required">
 							</div>
 
 							<div class="contact_form">
@@ -40,10 +40,10 @@
 							<div class="contact_form">
 								<label for="">Type of Enquiry</label>
 								<select name="enquiry_submit" class="enqueryType">
-									<option value="Health Related">Health Related</option>
-									<option value="Business Related">Business Related</option>
-									<option value="Free Listing">Free Listing</option>
-									<option value="Others">Others</option>
+									<option value="healthy">Healthy Related</option>
+									<option value="business">Business Related</option>
+									<option value="freeListing">Free Listing</option>
+									<option value="other">Others</option>
 								</select>
 									<div class="drop"></div>
 							</div>
@@ -62,9 +62,7 @@
 							</div>
 						</li>
 						<li class="submit">
-							<div class="contact_form">
 							<input type="submit" name="Submit" value="Submit">
-							</div>
 						</li>
 					</ul>
 				</form>

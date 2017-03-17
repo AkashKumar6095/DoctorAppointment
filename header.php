@@ -1,4 +1,6 @@
-<?php $siteroot="http://127.0.0.1/Doctor2"?>
+	<?php 
+include('conn.php')	;
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,7 +13,7 @@
 	<link rel="stylesheet" href="<?php echo $siteroot;?>/css/footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="<?php echo $siteroot;?>/js/jquery.min.js"></script>
 </head>
 <body>
 	<header id="header">
@@ -23,19 +25,31 @@
 					<li><a href="<?php echo $siteroot;?>/" class="searchOverlayTrigger">Book appointment now</a></li>
 					<li><a href="<?php echo $siteroot;?>/about.php">About us</a></li>
 					<li><a href="<?php echo $siteroot;?>/contact.php">Contact</a></li>
-					<li><a href="" class="2login">Login/register</a></li>
+					<!-- <li class="dropitnow"><a href="" class="logintabs" style="font-family: cursive;">Welcome, Username
+						</a>
+						<ul class="dropdwnlst">
+							<li><a href="#" title="">Your Orders</a></li>
+							<li><a href="#" title="">Your Profile</a></li>
+							<li><a href="#" title="">Log Out</a></li>
+						</ul>
+					</li> -->
+					<li class="greentab"><a href="" class="2login">Login/register</a></li>
 				</ul>
 			</nav>
+
+
 			<div class="mobMenu">
-				<ul class="mobileUl">
-					<li class="home"><a href="#" title=""></a></li>
-					<!--
-					<li><a href="#" title="">Our Doctors</a></li>
-					<li><a href="#" title="">Book Appointment Now</a></li>
-					<li><a href="#" title="">About Us</a></li>
-					<li><a href="#" title="">Contact Us</a></li>
-					<li><a href="#" title="">Login/Register</a></li>
-				-->
+				<ul class="mobileUl menutriggeron">
+					<li class="home"><a href="#" title="" style="width: 35px; height: 22px;"></a>
+					<ul class="newHome">
+						<li><a href="<?php echo $siteroot;?>/index.php" title="">Home</a></li>
+						<li><a href="#" title="">Our Doctors</a></li>
+						<li><a href="<?php echo $siteroot;?>/" class="searchOverlayTrigger">Book appointment now</a></li>
+						<li><a href="<?php echo $siteroot;?>/about.php" title="">About Us</a></li>
+						<li><a href="<?php echo $siteroot;?>/contact.php" title="">Contact Us</a></li>
+						<li class="color"><a href="#" title="" class="2login">Login/Register</a></li>
+					</ul>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -45,48 +59,38 @@
 	<div class="banOverlayMain">
 		<span class="searchCancel">&#10005;</span>
 		<ul class="searchTab">
-			<li data-id="#sTab1" class="searchTabActive">Doctor</li>
-			<li data-id="#sTab2">Dentist</li>
+			<li data-id="doctor" class="searchTabActive">Doctor</li>
+			<li data-id="dentist">Dentist</li>
 		</ul>
-		<form action="" method="">
-		<div id="sTab1" class="searchTabContainer" style="display: block;">
+		<form method="GET" action="<?php echo $siteroot;?>/search.php" id="searchFrom">
+		<div class="searchTabContainer" style="display: block;">
 			<div class="overlayLeft">
-				<div class="overlayHeading">Enter your Area/Pin Code*</div>
-				<input type="text" name="pin" id="pin">
+				<div class="overlayHeading">Enter your Area Pin Code*</div>
+				<input type="text" name="pcode" required="required" id="pin">
 			</div>
+			<style type="text/css" media="screen">
+			.dentist
+			{
+				display: none;
+			}	
+			</style>
 			<div class="overlayRight">
 				<div class="overlayHeading">Specialist in </div>
-				<select id="overlayDropdown">
-					<option>Ophthalmologist (Eye Specialist) </option>
-					<option>Cardiologist (Heart Specialist)</option>
-					<option>Gastroenterologist (Liver Disorder) </option>
-					<option>Gynecologist (Women Health </option>
-					<option>Urologist (Urinary Problems) </option>
-					<option>Dermatologist (Skin Specialist)</option>
-					<option>Psychiatrist (Mental illness) </option>
-					<option>Ear Nose Throat (ENT Specialist) </option>
-					<option>Neurologist (Neurological Disorder) </option>
+				<select id="overlayDropdown" name="cid" class="select_cat">
+					<?php
+							$sql="SELECT * FROM `doctor_category`";
+							$res=mysqli_query($connection, $sql);
+							while($row=mysqli_fetch_assoc($res))
+							{
+								$cat_id=$row['cat_id'];
+								$cat_name=$row['cat_name'];
+								$d_type=$row['type'];
+							?>
+					<option value="<?php echo $cat_id;?>" class="<?php echo $d_type;?>"><?php echo $cat_name;?></option>
+					<?php }?>
 				</select>
-			</div>
-			<div class="searchButtonWrap">
-				<input type="submit" id="searchButton" value="Search">
-			</div>
-		</div>
-		<div id="sTab2" class="searchTabContainer">
-			<div class="overlayLeft">
-				<div class="overlayHeading">Enter your Area/Pin Code*</div>
-				<input type="text" name="pin" id="pin">
-			</div>
-			<div class="overlayRight">
-				<div class="overlayHeading">Specialist in </div>
-				<select id="overlayDropdown">
-					<option>Dentist</option>
-					<option>Orthodontist</option>
-					<option>Endodontist</option>
-					<option>Prosthodontist</option>
-					<option>Pediatric Dentist</option>
-					<option>Implantologist</option>
-				</select>
+
+				
 			</div>
 			<div class="searchButtonWrap">
 				<input type="submit" id="searchButton" value="Search">
@@ -109,20 +113,20 @@
 				</div>
 				<div class="tabWrap" id="newlog" style="display: block;">
 					<div class="details">
-					<form action="loginform_submit.php" method="post" accept-charset="utf-8">
+					<form action="" method="" accept-charset="utf-8">
 						<ul class="formtype">
 							<li>
 								<label>Username
-								<input type="text" name="username_submit" value="" required="required" placeholder="Username"></label>
+								<input type="text" name="" value="" required="required" placeholder="Username"></label>
 							</li>
 							<li>
 								<label>Password
-								<input type="text" name="password_submit" value="" required="required" placeholder="Password"></label>
+								<input type="text" name="" value="" required="required" placeholder="Password"></label>
 							</li>
 							<li class="check">
 								<label>Remember me
 								<input type="checkbox" name="" value=""></label>
-								<a href="#" title="">forgot password ?</a>
+								<a href="#" title="" class="forgotpassWord">forgot password ?</a>
 							</li>
 							<li class="submitb">
 								<input type="submit" name="" value="Login">
@@ -139,31 +143,31 @@
 				</div>
 				<div class="tabWrap" id="oldlog">
 					<div class="details">
-					<form action="signupform_submit.php" method="post" accept-charset="utf-8">
+					<form action="" method="" accept-charset="utf-8">
 						<ul class="formtype">
 							<li>
 								<label>Name
-								<input type="text" name="name_submit" value="" required="required" placeholder="Name"></label>
+								<input type="text" name="" value="" required="required" placeholder="Name"></label>
 							</li>
 							<li>
 								<label>Address
-								<input type="text" name="address_submit" value="" required="required" placeholder="Address"></label>
+								<input type="text" name="" value="" required="required" placeholder="Address"></label>
 							</li>
 							<li>
 								<label>Pincode
-								<input type="text" name="pincode_submit" value="" required="required" placeholder="Pincode"></label>
+								<input type="text" name="" value="" required="required" placeholder="Pincode"></label>
 							</li>
 							<li>
 								<label>Aadhaar No.
-								<input type="text" name="aadhar_submit" value="" required="required" placeholder="Aadhaar No."></label>
+								<input type="text" name="" value="" required="required" placeholder="Aadhaar No."></label>
 							</li>
 							<li>
 								<label>Password
-								<input type="text" name="password_submit" value="" required="required" placeholder="Password"></label>
+								<input type="text" name="" value="" required="required" placeholder="Password"></label>
 							</li>
 							<li>
 								<label>Confirm Password
-								<input type="text" name="confirmpassword_submit" value="" required="required" placeholder="Confirm Password"></label>
+								<input type="text" name="" value="" required="required" placeholder="Confirm Password"></label>
 							</li>
 							<li class="submitb">
 								<input type="submit" name="" value="Register">
@@ -178,6 +182,37 @@
 			</div>
 		</div>
 	</div>
+
+
+
+
+	<div class="mainWrapp">
+		<div class="midWraps">
+			<div class="wrapper3">
+				<div class="detailsTabs">
+					<form action="" method="" accept-charset="utf-8">
+						<ul class="formtypetabs">
+							<li class="inputtype">
+								<label>Enter Registered E-mail-ID/Mobile No.</label>
+								<input type="text" name="" value="" required="required" placeholder="E-mail-ID/Mobile No.">
+							</li>
+							<li class="submitbc">
+								<a href="" title="" class="goback">< BACK</a>
+								<input type="submit" name="" value="Reset Password">
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
 				
 <script type="text/javascript">
 $(document).on('click', '.topic li', function() {
@@ -200,4 +235,49 @@ $(document).on('click', '.register2', function(event) {
 });
 
 
-</script>
+
+
+
+$(document).on('click', '.forgotpassWord', function(event) {
+	event.preventDefault();
+	$(".main3").hide();
+	$(".mainWrapp").show();
+
+});
+
+$(document).on('click', '.goback', function(event) {
+	event.preventDefault();
+	$(".main3").show();
+	$(".mainWrapp").hide();
+
+});
+
+
+
+
+
+
+$(document).on('click', '.menutriggeron', function() {
+	$('.newHome').css('left', '0');
+	$('.mobileUl').removeClass('menutriggeron').addClass('menutriggeroff');
+});
+
+$(document).on('click', '.menutriggeroff', function() {
+	$('.newHome').css('left', '-100%');
+	$('.mobileUl').removeClass('menutriggeroff').addClass('menutriggeron');
+});
+
+$("#searchFrom").submit(function(event){
+	var pin=$("#pin").val();
+	if(!$.isNumeric(pin))
+	{
+		event.preventDefault();
+		alert("Invalid Pincode");
+	}
+});
+</script> 
+
+
+ 
+
+	
