@@ -16,4 +16,7 @@ ADHAR SHARMA (Roll No 130101016) is doing the Medical Store Module
 https://github.com/adsharma95/EFFICIENT-SEARCHING-IN-ERP-SYSTEM-FOR-HOSPITAL-SERVICES/tree/February
 
 
-Project Guide:- Mr. GAURI SHANKAR MISHRA (Asst. Professor CSE)
+Project Guide:- 
+
+Mr. GAURI SHANKAR MISHRA 
+(Asst. Professor CSE)
