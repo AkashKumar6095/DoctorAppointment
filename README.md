@@ -7,7 +7,7 @@ Project Partners :-
 ABHISHEK RAJ KESHRI (Roll No 130101015) is doing the Hospital Bed Booking Module 
 
 
-https://github.com/adsharma95/EFFICIENT-SEARCHING-IN-ERP-SYSTEM-FOR-HOSPITAL-SERVICES/tree/February
+https://github.com/Abhishek015/ERP-System-For-Hospital-Services/tree/MARCH
 
 
 ADHAR SHARMA (Roll No 130101016) is doing the Medical Store Module
