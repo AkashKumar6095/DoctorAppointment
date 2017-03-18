@@ -20,3 +20,23 @@ Project Guide:-
 
 Mr. GAURI SHANKAR MISHRA 
 (Asst. Professor CSE)
+
+The Following Languages were used:
+
+HTML(For Designing the Webpages)
+
+CSS(For Styling the webpages)
+
+PHP(For Database Connectivity)
+
+JavaScript,JQuery,Ajax(For providing User Interactivity to the Webpages)
+
+MySql (To Fetch Data from the Database)
+
+The Following Softwares were used:
+
+XAMPP (For Creating the LocalHost Server)
+
+Notepad++ (For Writing the Code)
+
+PhpMyAdmin (For Creating and maintaining the Database)
