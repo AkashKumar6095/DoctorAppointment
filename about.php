@@ -1,5 +1,5 @@
-<?php include('header.php');?>
-<link rel="stylesheet" type="text/css" href="css/about.css">
+<?php include('header.php');?>          //includes Header
+<link rel="stylesheet" type="text/css" href="css/about.css">    
 <div class="main">
 		<div class="headimg">
 				<div class="imgbox">
@@ -71,4 +71,4 @@
 	</div>
 	</div>
 
-	<?php include('footer.php');?>
+	<?php include('footer.php');?>      //includes Footer
