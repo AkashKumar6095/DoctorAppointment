@@ -31,7 +31,7 @@ PHP(For Database Connectivity)
 
 JavaScript,JQuery,Ajax(For providing User Interactivity to the Webpages)
 
-MySql (To Fetch Data from the Database)
+MySql (To Fetch the Data from the Database)
 
 The Following Softwares were used:
 
@@ -39,4 +39,4 @@ XAMPP (For Creating the LocalHost Server)
 
 Notepad++ (For Writing the Code)
 
-PhpMyAdmin (For Creating and maintaining the Database)
+PhpMyAdmin (For Creating and Maintaining the Database)
