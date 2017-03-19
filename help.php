@@ -68,7 +68,7 @@ if(isset($_GET['key']))
 						<p>
 							Enter your feedback:
 						</p>
-						<a href="file:///C:/Users/Rohit/Desktop/My%20Codings/Doctor%20Website/feedback.php" title="Feedback" class="feedbackpop">Feedback</a>
+						<a href="http://127.0.0.1/Doctor2/feedback.php" title="Feedback" class="feedbackpop">Feedback</a>
 					</div>
 
 
