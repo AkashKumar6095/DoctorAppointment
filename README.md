@@ -25,7 +25,7 @@ The Following Languages were used:
 
 HTML(For Designing the Webpages)
 
-CSS(For Styling the webpages)
+CSS(For Styling the Webpages)
 
 PHP(For Database Connectivity)
 
