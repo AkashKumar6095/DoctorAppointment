@@ -41,15 +41,21 @@ if(isset($_GET['did']))
 ?>
 	<link rel="stylesheet" type="text/css" href="css/appoint2.css">
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+        <!--main start-->
 	<div class="main">
+		<!--midWrap start-->
 		<div class="midWrap">
+			<!--wrapper start-->
 			<div class="wrapper">
+				<!--bodyWrap start-->
 				<div class="bodyWrap">
+					<!--Image-->
 					<div class="profile">
 					<div class="profilepic">
 						<img src="images/Male-placeholder.jpg" alt="">
 					</div>
 					
+				        <!--details start-->
 					<div class="details">
 						<h2><?php echo $doctor_name;?></h2>
 						<div class="leftdetail">
@@ -59,19 +65,27 @@ if(isset($_GET['did']))
 							<p>Qualification</p>
 						</div>
 						<div class="leftdetail2">
-							<p>: <?php echo $d_clname;?></p>
-							<p>: <?php echo $d_claddr;?></p>
-							<p>: <?php echo $cat_name;?></p>
-							<p>: <?php echo $d_qual;?></p>
+							<p>: <?php echo $d_clname; //display clinic name from the database
+								?></p>
+							<p>: <?php echo $d_claddr; //display clinic address from the database
+								?></p>
+							<p>: <?php echo $cat_name; //display category name from the database
+								?></p>
+							<p>: <?php echo $d_qual; //display clinic name from the database
+								?></p>
 						</div>
 					</div>
+					<!--details end-->
 				</div>
 				
 				<?php include('monthly_attnd_rpt.php');?>
 				
 				</div>
+				<!--bodyWrap end-->
 			</div>
+			<!--wrapper end-->
 		</div>
+		<!--midWrap end-->
 	</div>
-
+        <!--main end-->
 <?php include('footer.php');?>
