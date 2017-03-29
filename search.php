@@ -12,7 +12,7 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 
 
 <?php
-								$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$cid'";
+								$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$cid'";  //fetch all categories from doctor_category table
 								$rescat=mysqli_query($connection, $sqlcat);
 								
 								$rowcat=mysqli_fetch_assoc($rescat);
@@ -22,14 +22,20 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 								?>
 <link rel="stylesheet" type="text/css" href="css/index.css">
 
-
-	<div class="mainWrap">
+           <!--mainWrap start-->
+           <div class="mainWrap">
+		<!--mid wrap start-->
 		<div class="midWrap">
-			
+			<!--container start-->
 			<div class="container">
-				
+				<!--Results main wrap start-->
 				<div class="resultsMainWrap">
-					<div class="resultHeading">Search Result For <b>Pincode : <?php echo $pcode;?></b> and <b>Category : <?php echo $cat_name;?></b></div>
+			        <!--Result Heading start-->
+				<div class="resultHeading">Search Result For <b>Pincode : <?php echo $pcode;?></b> and <b>Category : <?php echo $cat_name;?>
+					</b>
+					</div>
+					<!--Result Heading end-->
+					<!--Result wrap start-->
 					<div class="resultWrap">
 						<ul class="resultsHeadingWrap">
 							<li>Dr. Name</li>
@@ -45,9 +51,9 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 						
 						<div class="" id="rTab<?php echo $cat_id;?>">
 							<ul class="resultsList">
-								<?php
-								$sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";
-								$res=mysqli_query($connection, $sql);
+					                        <?php
+					                        $sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";    //fetch all categories and pin code in doctor type and doctors from doctors and doctor_category table
+					                        $res=mysqli_query($connection, $sql);
 								$result_count=mysqli_num_rows($res);
 								while($row=mysqli_fetch_assoc($res))
 								{
@@ -93,9 +99,13 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 							</ul>
 						</div><!-- resultChange end -->
 					</div>
+					<!--Result wrap end-->
 				</div>
+				<!--Results main wrap end-->
 			</div>
+			<!--container end-->
 		</div>
+		<!--mid wrap end-->  
 	</div>
-
+       <!--main wrap end-->
 <?php include('footer.php');?>
