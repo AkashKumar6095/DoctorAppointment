@@ -52,7 +52,7 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 						<div class="" id="rTab<?php echo $cat_id;?>">
 							<ul class="resultsList">
 					                        <?php
-					                        $sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";    //fetch all categories and pin code in doctor type and doctors from doctors and doctor_category table
+					                        $sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";    //fetch all category id's and pin code from doctors table
 					                        $res=mysqli_query($connection, $sql);
 								$result_count=mysqli_num_rows($res);
 								while($row=mysqli_fetch_assoc($res))
