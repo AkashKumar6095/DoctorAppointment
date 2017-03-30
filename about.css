@@ -1,19 +1,23 @@
 /*CSS file to style about.php file*/
+ /****styling the body ****/
 body 
 	{
 		margin: 0;
-		font-family: 'Open Sans', sans-serif;
+		font-family: 'Open Sans', sans-serif;  
 	}
+ /****styling the main from the top to bottom ****/
 .main 
 	{
-		float: left;
+		float: left;   
 		width: 100%;
 	}
+/****styling the headimg for the header image ****/
 .headimg
 	{
-		margin: auto;
+		margin: auto;                 
 		max-width: 1200px;
 	}
+/****styling the imgbox for the header image ****/
 .imgbox
 	{
 		float: left;
@@ -24,17 +28,20 @@ body
 		float: left;
 		width: 100%;
 	}
+/****styling the midWrap****/
 .midWrap 
 	{
 		max-width: 1200px;
 		margin: auto;
 	}
+/****styling the wrapper class****/
 .wrapper 
 	{
 		float: left;
 		width: 96%;
 		margin: 20px 2%;
 	}
+/****styling the topWrap for heading ****/
 .topwrap 
 	{
 		float: left;
@@ -65,6 +72,7 @@ body
 		text-align: center;
 		margin: auto;
 	}
+/****styling the marquee class ****/
 .marquee 
 	{
 		float: left;
@@ -79,12 +87,14 @@ body
 		width: 100%;
 		font-size: 30px;
 	}
+/****styling the bodyWrap for description ****/
 .bodyWrap 
 	{
 		float: left;
 		width: 100%;
 		margin: 30px 0;
 	}
+/****styling the para class for the paragraphs description ****/
 .para 
 	{
 		float: left;
@@ -100,6 +110,7 @@ body
 		line-height: 23px;
 		text-align: justify;
 	}
+/****styling the headings****/
 .headings 
 	{
 		float: left;
