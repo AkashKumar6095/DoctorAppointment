@@ -2,10 +2,10 @@
 <?php
 /*
 hit url
-http://127.0.0.1/doctor2/update_slot.php?date=2017-02-17
+http://127.0.0.1/doctor2/update_slot.php?date=YYYY-MM-DD
 */
 $date_g = @$_GET['date'];
-	$sql_doctor="SELECT * FROM `doctors`";
+	$sql_doctor="SELECT * FROM `doctors`";       //fetch all doctors and dentists from doctors table
 	$res_doctor=mysqli_query($connection, $sql_doctor);
 	while($row=mysqli_fetch_assoc($res_doctor))
 	{
@@ -25,7 +25,7 @@ $date_g = @$_GET['date'];
 									$available_in_eve_to=$row['available_in_eve_to'];
 									$appoi_time_minuts=$row['appoi_time_minuts'];
 
-									$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'";
+									$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'"; //fetch all categories of doctors and dentists from doctor_category table
 									$rescat=mysqli_query($connection, $sqlcat);
 									$rowcat=mysqli_fetch_assoc($rescat);
 									$cat_name=$rowcat['cat_name'];
@@ -64,7 +64,7 @@ $date_g = @$_GET['date'];
 						$this_date=$date_g;
 					}
 
-				$sql="SELECT * FROM `slot_availability` WHERE `doctor_id` = '$did' AND `date` = '$this_date'";
+				$sql="SELECT * FROM `slot_availability` WHERE `doctor_id` = '$did' AND `date` = '$this_date'";  
 				$res=mysqli_query($connection, $sql);
 				$count=mysqli_num_rows($res);
 
