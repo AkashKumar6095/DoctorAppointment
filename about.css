@@ -28,7 +28,7 @@ body
 		float: left;
 		width: 100%;
 	}
-/****styling the midWrap****/
+/****styling the midWrap class****/
 .midWrap 
 	{
 		max-width: 1200px;
@@ -110,7 +110,7 @@ body
 		line-height: 23px;
 		text-align: justify;
 	}
-/****styling the headings****/
+/****styling the headings class for the heading of the paragraphs****/
 .headings 
 	{
 		float: left;
