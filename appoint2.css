@@ -1,26 +1,31 @@
 /*CSS file to style appoint2.php file*/
-body 
+ /****styling the body ****/
+body                                          
 	{
 		margin: 0;
 		font-family: arial;
 		background-color: #fff;
 	}
+ /****styling the main from the top to bottom ****/
 .main 
 	{
 		float: left;
 		width: 100%;
 	}
+ /****styling the midWrap class ****/
 .midWrap 
 	{
 		max-width: 1200px;
 		margin: auto;
 	}
+ /****styling the wrapper class****/
 .wrapper 
 	{
 		float: left;
 		width: 100%;
 		background-color: #fff;
 	}
+ /****styling thebodyWrap class ****/
 .bodyWrap 
 	{
 		float: left;
@@ -28,6 +33,7 @@ body
 		padding: 1% 4%;
 		background-color: #fff;
 	}
+ /****styling the profile class for the image****/
 .profile 
 	{
 		float: left;
@@ -43,6 +49,7 @@ body
 		float: left;
 		width: 100%;
 	}
+ /****styling the details class ****/
 .details 
 	{
 		float: left;
