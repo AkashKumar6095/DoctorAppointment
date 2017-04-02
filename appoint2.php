@@ -72,7 +72,7 @@ if(isset($_GET['did']))
 								?></p>
 							<p>: <?php echo $cat_name; //display category name from the database
 								?></p>
-							<p>: <?php echo $d_qual; //display clinic name from the database
+							<p>: <?php echo $d_qual; //display doctor qualification from the database
 								?></p>
 						</div>
 					</div>
