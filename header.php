@@ -1,5 +1,6 @@
-	<?php 
-include('conn.php')	;
+<!-----------------------HEADER---------------------->
+<?php 
+include('conn.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,11 +14,14 @@ include('conn.php')	;
 	<link rel="stylesheet" href="<?php echo $siteroot;?>/css/footer.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet"> 
+	<!-- Latest compiled and minified JavaScript -->
 	<script src="<?php echo $siteroot;?>/js/jquery.min.js"></script>
 </head>
 <body>
+	<!--header starts-->
 	<header id="header">
 		<div id="midWrap">
+			<!--Navigation Starts-->
 			<nav id="nav">
 				<ul>
 					<li><a href="<?php echo $siteroot;?>">Home</a></li>
@@ -36,8 +40,8 @@ include('conn.php')	;
 					<li class="greentab"><a href="" class="2login">Login/register</a></li>
 				</ul>
 			</nav>
-
-
+                        <!--Navigation ends-->
+                        <!--Mobile Responsive Menu Bar starts-->
 			<div class="mobMenu">
 				<ul class="mobileUl menutriggeron">
 					<li class="home"><a href="#" title="" style="width: 35px; height: 22px;"></a>
@@ -52,8 +56,10 @@ include('conn.php')	;
 					</li>
 				</ul>
 			</div>
+			<!--Mobile Responsive Menu Bar Ends-->
 		</div>
 	</header>
+	<!-- header ends -->
 
 	<div class="banOverlay">
 	<div class="banOverlayMain">
@@ -78,9 +84,8 @@ include('conn.php')	;
 				<div class="overlayHeading">Specialist in </div>
 				<select id="overlayDropdown" name="cid" class="select_cat">
 					<?php
-							$sql="SELECT * FROM `doctor_category`";
-							$res=mysqli_query($connection, $sql);
-							while($row=mysqli_fetch_assoc($res))
+							$sql="SELECT * FROM `doctor_category`";  //fetch all doctors and dentists categories from doctor_category table							$res=mysqli_query($connection, $sql);
+							while($row=mysqli_fetch_assoc($res))     //executes queries
 							{
 								$cat_id=$row['cat_id'];
 								$cat_name=$row['cat_name'];
@@ -111,8 +116,10 @@ include('conn.php')	;
 						<div class="cross"><span></span></div>
 					</ul>
 				</div>
+				<!---------------------LOGIN---------------------------->
 				<div class="tabWrap" id="newlog" style="display: block;">
 					<div class="details">
+					<!--Form Starts-->	
 					<form action="" method="" accept-charset="utf-8">
 						<ul class="formtype">
 							<li>
@@ -139,10 +146,13 @@ include('conn.php')	;
 							</li>
 						</ul>
 					</form>
+					<!--Form Ends-->	
 				</div>
 				</div>
+				<!---------------------MODAL REGISTRATION STARTS--------------------->
 				<div class="tabWrap" id="oldlog">
 					<div class="details">
+					<!--Form Starts-->
 					<form action="" method="" accept-charset="utf-8">
 						<ul class="formtype">
 							<li>
@@ -176,20 +186,21 @@ include('conn.php')	;
 								<a href="http://127.0.0.1/Doctor2/privacy.php" title="">Privacy policy</a>
 							</li>
 						</ul>
-					</form>
+						</form>
+					<!-- Form ends -->
 				</div>
 				</div>
+				<!-- MODAL REGISTRATION ENDS -->
 			</div>
 		</div>
 	</div>
 
-
-
-
+        <!--Forgot Password-->
 	<div class="mainWrapp">
 		<div class="midWraps">
 			<div class="wrapper3">
 				<div class="detailsTabs">
+					<!--Form Starts-->
 					<form action="" method="" accept-charset="utf-8">
 						<ul class="formtypetabs">
 							<li class="inputtype">
@@ -202,6 +213,7 @@ include('conn.php')	;
 							</li>
 						</ul>
 					</form>
+					<!--Form Ends-->
 				</div>
 			</div>
 		</div>
