@@ -23,9 +23,9 @@
 					<div class="tabContainer" id="tab1" style="display: block;">
 						<ul class="dantistList">
 							<?php
-					           //fetch all categories in doctor type from doctor_category table
+					           //fetch all categories in doctor type from doctor_category table where type is doctor
 							$sql="SELECT * FROM `doctor_category` WHERE `type` = 'doctor'";
-							$res=mysqli_query($connection, $sql);
+							$res=mysqli_query($connection, $sql); //executes queries
 							while($row=mysqli_fetch_assoc($res))
 							{
 								$cat_id=$row['cat_id'];
@@ -40,7 +40,7 @@
 							<?php
 					         //fetch all categories in dentist type from doctor_category table
 							$sql="SELECT * FROM `doctor_category` WHERE `type` = 'dentist'";
-							$res=mysqli_query($connection, $sql);
+							$res=mysqli_query($connection, $sql);  //executes queries
 							while($row=mysqli_fetch_assoc($res))
 							{
 								$cat_id=$row['cat_id'];
@@ -73,7 +73,7 @@
 						<?php
 						    //fetch all categories from doctor_category table
 							$sqlcat="SELECT * FROM `doctor_category`";
-							$rescat=mysqli_query($connection, $sqlcat);
+							$rescat=mysqli_query($connection, $sqlcat);  //executes queries
 							while($rowcat=mysqli_fetch_assoc($rescat))
 							{
 								$cat_id=$rowcat['cat_id'];
@@ -85,7 +85,7 @@
 								<?php
 						//fetch all Doctors from doctors table by specific category ID
 								$sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cat_id'";
-								$res=mysqli_query($connection, $sql);
+								$res=mysqli_query($connection, $sql); //executes queries
 								while($row=mysqli_fetch_assoc($res))
 								{
 									
