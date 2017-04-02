@@ -23,6 +23,7 @@ body
 		padding: 1% 4%;
 		background-color: #fff;
 	}
+ /****styling the Doctor Image ****/
 .profile 
 	{
 		float: left;
@@ -38,6 +39,7 @@ body
 		float: left;
 		width: 100%;
 	}
+ /****styling the details and information ****/
 .details 
 	{
 		float: left;
