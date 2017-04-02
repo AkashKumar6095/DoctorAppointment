@@ -7,11 +7,11 @@ $age = $_POST['patage_age'];                      // $age gets the age of the pa
 
 $category = $_POST['category'];                  // $category gets the category of the doctor/dentist selected from drop down menu being extracted 
 $other_cat = $_POST['other_cat'];                // $sother_cat gets the others category from the category of the doctor/dentist from the drop down being extracted 
-if($category=="others")                          // if $category gets the others being extracted   
+if($category=="others")                          // if $category is assigned others option by the user from the drop down menu  
 {
 	$category=$other_cat;                     // $category gets the others option being extracted 
 }
-$cosult_before = $_POST['cosult_option'];       // $cosult_option gets whether the patient has visited the doctor earlier or not being extracted 
+$cosult_before = $_POST['cosult_option'];       // $cosult_before gets whether the patient has visited the doctor earlier or not being extracted 
 
 $message = $_POST['explain_submit'];            // $message gets the info about the health problem by the patient being extracted 
  
@@ -22,10 +22,10 @@ $contact = $_POST['contact_submit'];            // $contact gets the contact num
 $address = $_POST['pataddress_submit'];         // $address gets the "email address of the patient being extracted 
 
 $sql="SELECT * FROM `slot_availability` WHERE `slot_id` = '$sid' AND `status`='available'";   //fetch all slots from slot_availability table when values slot_id column are equal to $sid and status column is equal to available
-$res=mysqli_query($connection, $sql);
-$slotcheck=mysqli_num_rows($res);
+$res=mysqli_query($connection, $sql);       //executes queries
+$slotcheck=mysqli_num_rows($res);           //gets the total number of slots for each/doctors by returning the number of rows
 
-if($slotcheck>0)         //Until No of slots of each doctor/dentist are more than 0
+if($slotcheck>0)         //If No of slots of the doctor/dentist are more than 0 this loop executes
 {
  // $sql variable to store SQL Query to Add Slots to the Database Start //
 $sql="INSERT INTO `slot_booking` (`slot_id`, `name`, `age`, `category`, `consult_before`, `message`, `email`, `contact`, `address`, `status`) VALUES('$sid', '$name', '$age', '$category', '$cosult_before', '$message', '$email', '$contact', '$address', 'confirmed')";  
