@@ -16,7 +16,7 @@
 		<!--midWrap start-->
 			<div class="wrap">
 			<!--wrap start-->
-				<!--After clicking the Submit Button-->
+				<!--Form Starts and after it is submitted it is sent for processing to contactform_submit.php file with the HTTP Post Method-->
 				<form action="contactform_submit.php" method="post" accept-charset="utf-8">
 					<ul class="contactus">
 						<li class="text"><h1>CONTACT US<span></span></h1></li>
@@ -41,6 +41,7 @@
 							<div class="contact_form">
 								<!--Phone No Field to be input by the user-->
 								<label>Phone<span>*</span></label>
+								<!--Form Validation For Contact Number-->
 								<input type="text" name="phone_submit" pattern="[789][0-9]{9}" value="" required="required">
 							</div>
 
@@ -77,6 +78,7 @@
 							</div>
 						</li>
 						<li class="submit">
+							<!--Submit Button-->
 							<input type="submit" name="Submit" value="Submit">
 						</li>
 					</ul>
