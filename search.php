@@ -2,8 +2,8 @@
 <?php
 if(isset($_GET['pcode']) && isset($_GET['cid']))
 {
-	$pcode=$_GET['pcode'];
-	$cid=$_GET['cid'];
+	$pcode=$_GET['pcode'];                  //$pcode gets the pin code of the location of the doctor/dentist being extracted    
+	$cid=$_GET['cid'];                      //$cid gets the category id of the doctot/dentist being extracted
 }else
 {
 	exit();
@@ -12,14 +12,14 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 
 
 <?php
-								$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$cid'";  //fetch all categories from doctor_category table
-								$rescat=mysqli_query($connection, $sqlcat);
+	$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$cid'";  //fetch all categories from doctor_category table where cat_id column is equal to $cid
+        $rescat=mysqli_query($connection, $sqlcat);                         //executes queries
+	$rowcat=mysqli_fetch_assoc($rescat);                                //fetches the result row as an associative array
 								
-								$rowcat=mysqli_fetch_assoc($rescat);
-								
-									$cat_id=$rowcat['cat_id'];
-									$cat_name=$rowcat['cat_name'];
-								?>
+	$cat_id=$rowcat['cat_id'];
+	$cat_name=$rowcat['cat_name'];
+	?>
+<!--Custom CSS-->
 <link rel="stylesheet" type="text/css" href="css/index.css">
 
            <!--mainWrap start-->
@@ -52,9 +52,9 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 						<div class="" id="rTab<?php echo $cat_id;?>">
 							<ul class="resultsList">
 					                        <?php
-					                        $sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";    //fetch all category id's and pin code from doctors table
-					                        $res=mysqli_query($connection, $sql);
-								$result_count=mysqli_num_rows($res);
+					                        $sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";    //fetch all columns of doctors table where cat_id column is equal to $cid and d_pin column is equal to $pcode
+					                        $res=mysqli_query($connection, $sql);         //executes queries
+								$result_count=mysqli_num_rows($res);          //returns the rows in a result set
 								while($row=mysqli_fetch_assoc($res))
 								{
 									
