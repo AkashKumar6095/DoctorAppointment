@@ -1,12 +1,17 @@
+<!---------------FOOTER------------------------->
+<!--footer starts-->
 <footer id="footer">
 <div id="midWrap">
 	<ul class="footerLinks">
-		<li><a href="<?php echo $siteroot;?>/contact.php">Contact Us</a></li>
-		<li><a href="<?php echo $siteroot;?>/privacy.php">Privacy policy</a></li>
+		<li>
+		 <a href="<?php echo $siteroot;?>/contact.php" >Contact Us</a></li>
+		<li><a href="<?php echo $siteroot;?>/privacy.php"> Privacy policy </a></li>
 		<li><a href="<?php echo $siteroot;?>/help.php">Help</a></li>
 	</ul>
 </div>
 </footer>
+<!--footer ends-->
+<!-- Latest compiled and minified JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script type="text/javascript">
