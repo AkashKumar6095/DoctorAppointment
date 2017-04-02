@@ -1,12 +1,21 @@
+<!------------------------------------PRIVACY POLICY---------------------------------->
 <?php include('header.php');?>
+<!--Custom CSS-->
 <link rel="stylesheet" type="text/css" href="css/privacy.css">
+        <!--main starts-->
 	<div class="main">
+		<!--midWrap starts-->
 		<div class="midWrap">
+		        <!--wrapper class starts-->
 			<div class="wrapper">
+				<!--topwrap starts-->
 				<div class="topwrap">
+					<!--Heading-->
 					<h1>Privacy Policy<span></span></h1>
 				</div>
+				<!--topwrap ends-->
 				<div class="bodyWrap">
+					<!--Paragraph-->
 					<div class="para">
 						<p>
 							We respect the privacy of Users of our Services. This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
@@ -27,63 +36,69 @@
 						</p>
 					</div>
 					<div class="headings">
+						<!--Heading-->
 						<h2>Use Of Your Information</h2>
 					</div>
+					<!--Paragraph-->
 					<div class="para">
 						<p>
 							We use your Contact informationsuch as email address and mobile number primarily to contact you to provide you our Services.
 						</p>
 					</div>
-
+                                        <!--Heading-->
 					<div class="headings">
 						<h2>Passwords</h2>
 					</div>
+					<!--Paragraph-->
 					<div class="para">
 						<p>
 							You are responsible for safeguarding the password that you use to access the Services and for any activities or actions under your password. We encourage you to use "strong" passwords (passwords that use a combination of upper and lower case letters, numbers and symbols) with your account. We cannot and will not be liable for any loss or damage arising from your failure to comply with the above requirements.
 						</p>
 					</div>
-
+                                        <!--Heading-->
 					<div class="headings">
 						<h2>Changes to This Privacy Policy</h2>
 					</div>
+					<!--Paragraph-->
 					<div class="para">
 						<p>
 							We may update our Privacy Policy from time to time. Thus, we advise you to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately, after they are posted on this page.
 						</p>
 					</div>
-
+                                        <!--Heading-->
 					<div class="headings">
 						<h2>Services Alert and Critical Notices</h2>
 					</div>
+					<!--Paragraph-->
 					<div class="para">
 						<p>
 							Although we respect and honour your privacy, we shall maintain the right to contact you when it is required to make you aware of changes; that may impact your ability to use our products or services or to provide you with another alert.
 						</p>
 					</div>
-
-
+					<!--Heading-->
 					<div class="headings">
 						<h2>Retention and Removal</h2>
 					</div>
+					<!--Paragraph-->
 					<div class="para">
 						<p>
 							We may retain such information collected from Users for as long as necessary, depending on the type of information; purpose, means and modes of usage of such information. Computer web server may be preserved as long as administratively necessary.
 						</p>
 					</div>
-
-
+					<!--Heading-->
 					<div class="headings">
 						<h2>Contact Us</h2>
 					</div>
+					<!--Paragraph-->
 					<div class="para">
 						<p>
 							If you have any questions or suggestions about our Privacy Policy, do not hesitate to <a href="http://127.0.0.1/Doctor2/contact.php" title="">contact us.</a>
 						</p>
 					</div>
-
 			</div>
+			<!--bodyWrap ends-->	
 		</div>
+		<!--wrapper class ends-->	
 	</div>
-
+        <!--midWrap ends-->
 <?php include('footer.php');?>
