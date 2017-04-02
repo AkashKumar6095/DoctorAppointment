@@ -1,5 +1,6 @@
-<!--About Us-->
-<?php include('header.php');?>          
+<!-----------------------------ABOUT US----------------------------------------->
+<?php include('header.php');?> 
+<!--Custom CSS-->
 <link rel="stylesheet" type="text/css" href="css/about.css">  
 <!--main start-->
 <div class="main">
