@@ -56,5 +56,5 @@ $res=mysqli_query($connection, $sql);  //executes queries
 </div>
 </div>
 </div>
-<!--Styling the Page End-->
+<!-------------------------------------------- Styling the page end ---------------------------------------------------------->
 	<?php }?>
