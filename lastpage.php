@@ -7,7 +7,7 @@ if(isset($_GET['date']) && isset($_GET['did']))
  
 	$sql="SELECT * FROM `doctors` WHERE `d_id` = '$did'";    // fetch all the columns of the doctors table where values in d_id table are equal to $did
 	$res=mysqli_query($connection, $sql);                    //executes queries
-	$row=mysqli_fetch_assoc($res);
+	$row=mysqli_fetch_assoc($res);                           //fetch result row as an associative array  
 								
 									
 	$catid=$row['cat_id'];
