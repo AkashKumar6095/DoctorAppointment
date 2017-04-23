@@ -1,15 +1,15 @@
 <?php include('header.php');?>
-
+<!--CUSTOM CSS-->
 <link rel="stylesheet" type="text/css" href="css/index.css">
-
+        <!--mainWrap start-->
 	<div class="mainWrap">
+		<!--midWrap start-->
 		<div class="midWrap">
 		 <!--Header Image  -->
 			<div class="topImageWrap">
 				<img src="images/banner.jpg" alt="top Image">
 				<div class="topTextWrap">Search for a doctor near you based on speciality</div>
 			</div>				
-			<!--  -->
 			<div class="container" id="ourdoctor">
 				<div class="leftContainer">
 					<ul class="tabMain">
@@ -19,8 +19,8 @@
 					<div class="tabContainer" id="tab1" style="display: block;">
 						<ul class="dantistList">
 							<?php
-							$sql="SELECT * FROM `doctor_category` WHERE `type` = 'doctor'";
-							$res=mysqli_query($connection, $sql);
+							$sql="SELECT * FROM `doctor_category` WHERE `type` = 'doctor'"; //fetch all categories in doctor type from doctor_category table where type is doctor
+							$res=mysqli_query($connection, $sql);      //executes queries
 							while($row=mysqli_fetch_assoc($res))
 							{
 								$cat_id=$row['cat_id'];
@@ -33,8 +33,8 @@
 					<div class="tabContainer" id="tab2">
 						<ul class="dantistList">
 							<?php
-							$sql="SELECT * FROM `doctor_category` WHERE `type` = 'dentist'";
-							$res=mysqli_query($connection, $sql);
+							$sql="SELECT * FROM `doctor_category` WHERE `type` = 'dentist'"; //fetch all columns from doctor_category table where type is dentist
+							$res=mysqli_query($connection, $sql);    //executes queries
 							while($row=mysqli_fetch_assoc($res))
 							{
 								$cat_id=$row['cat_id'];
@@ -62,8 +62,8 @@
 						</ul>
 
 						<?php
-							$sqlcat="SELECT * FROM `doctor_category`";
-							$rescat=mysqli_query($connection, $sqlcat);
+							$sqlcat="SELECT * FROM `doctor_category`"; //fetch all columns from doctor_category table
+							$rescat=mysqli_query($connection, $sqlcat); //executes queries
 							while($rowcat=mysqli_fetch_assoc($rescat))
 							{
 								$cat_id=$rowcat['cat_id'];
@@ -73,8 +73,8 @@
 						<div class="resultChange" id="rTab<?php echo $cat_id;?>">
 							<ul class="resultsList">
 								<?php
-								$sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cat_id'";
-								$res=mysqli_query($connection, $sql);
+								$sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cat_id'"; //fetch all columns from doctors table where values in cat_id are equal to $cat_id
+								$res=mysqli_query($connection, $sql);                     //executes queries
 								while($row=mysqli_fetch_assoc($res))
 								{
 									
@@ -119,7 +119,7 @@
 	
 	<script>
 
-//detect location
+//map to detect location
 
 		var x = document.getElementById("map");
 		function getLocation() {
@@ -248,8 +248,8 @@
 			  $begin=1;
 			  $pokeicons=array();
 			  $j=0;
-				$sql="SELECT * FROM `doctors`";
-								$res=mysqli_query($connection, $sql);
+				$sql="SELECT * FROM `doctors`";      //fetch all columns from the doctors table
+								$res=mysqli_query($connection, $sql); //executes queries
 								while($row=mysqli_fetch_assoc($res))
 								{
 									
