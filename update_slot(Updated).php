@@ -9,13 +9,13 @@ $d_id = @$_GET['d_id'];
 
 if(!empty($d_id))
 {
-	$sql_doctor="SELECT * FROM `doctors` WHERE `d_id`='$d_id'";
+	$sql_doctor="SELECT * FROM `doctors` WHERE `d_id`='$d_id'";        //fetch all doctors and dentists from doctors table where values in d_id table are equal to $d_id 
 }else
 {
 	$sql_doctor="SELECT * FROM `doctors`";
 }
 
-	$res_doctor=mysqli_query($connection, $sql_doctor);
+	$res_doctor=mysqli_query($connection, $sql_doctor);     //execute queries
 	while($row=mysqli_fetch_assoc($res_doctor))
 	{
 								
@@ -34,9 +34,9 @@ if(!empty($d_id))
 									$available_in_eve_to=$row['available_in_eve_to'];
 									$appoi_time_minuts=$row['appoi_time_minuts'];
 
-									$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'";
-									$rescat=mysqli_query($connection, $sqlcat);
-									$rowcat=mysqli_fetch_assoc($rescat);
+									$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'"; //fetch all categories from doctor-category table where values in cat_id table are equal to $catid
+									$rescat=mysqli_query($connection, $sqlcat);  //executes queries
+									$rowcat=mysqli_fetch_assoc($rescat);            //fetch result row as an associative array  
 									$cat_name=$rowcat['cat_name'];
 
 									
