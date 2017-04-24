@@ -6,16 +6,19 @@ body
 		background-color: #fff;
 		font-family: arial;
 	}
+ /****styling the main from the top to bottom ****/
 .main 
 	{
 		float: left;
 		width: 100%;
 	}
+/****styling the midWrap class****/
 .midWrap 
 	{
 		max-width: 1200px;
 		margin: auto;
 	}
+
 .bodyWrap 
 	{
 		float: left;
