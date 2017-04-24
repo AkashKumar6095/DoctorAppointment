@@ -9,10 +9,10 @@ $d_id = @$_GET['d_id'];
 
 if(!empty($d_id))
 {
-	$sql_doctor="SELECT * FROM `doctors` WHERE `d_id`='$d_id'";        //fetch all doctors and dentists from doctors table where values in d_id table are equal to $d_id 
+	$sql_doctor="SELECT * FROM `doctors` WHERE `d_id`='$d_id'";        //fetch all tables from doctors table where values in d_id table are equal to $d_id 
 }else
 {
-	$sql_doctor="SELECT * FROM `doctors`";
+	$sql_doctor="SELECT * FROM `doctors`";                       //fetch all tables from doctors table
 }
 
 	$res_doctor=mysqli_query($connection, $sql_doctor);     //execute queries
@@ -34,7 +34,7 @@ if(!empty($d_id))
 									$available_in_eve_to=$row['available_in_eve_to'];
 									$appoi_time_minuts=$row['appoi_time_minuts'];
 
-									$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'"; //fetch all categories from doctor-category table where values in cat_id table are equal to $catid
+									$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'"; //fetch all tables from doctor_category table where values in cat_id table are equal to $catid
 									$rescat=mysqli_query($connection, $sqlcat);  //executes queries
 									$rowcat=mysqli_fetch_assoc($rescat);            //fetch result row as an associative array  
 									$cat_name=$rowcat['cat_name'];
@@ -45,7 +45,7 @@ if(!empty($d_id))
 				$slot_sql_values="";
 				$temparr=explode(':', $available_in_morn_from);
 				$available_in_morn_from_hr=$temparr[0];
-				if(count($temparr)==2)
+				if(count($temparr)==2)        
 				{
 					$available_in_morn_from_mn=$temparr[1];
 				}else
