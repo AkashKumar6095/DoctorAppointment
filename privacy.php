@@ -1,5 +1,5 @@
 <!------------------------------------PRIVACY POLICY---------------------------------->
-<?php include('header.php');?>
+<?php include('header.php');?>        //includes the header to the webpage
 <!--Custom CSS-->
 <link rel="stylesheet" type="text/css" href="css/privacy.css">
         <!--main starts-->
@@ -101,4 +101,4 @@
 		<!--wrapper class ends-->	
 	</div>
         <!--midWrap ends-->
-<?php include('footer.php');?>
+<?php include('footer.php');?>    //includes the footer to the webpage
