@@ -1,6 +1,6 @@
 <?php include('header.php');?>     //includes header to the webpage
 <?php
-if(isset($_GET['did']))
+if(isset($_GET['did']))           //until the variable set of did is not null
 {
 	$did=$_GET['did'];        //assign value of variable
 
@@ -29,7 +29,7 @@ if(isset($_GET['did']))
 	$rowcat=mysqli_fetch_assoc($rescat);                                  // Associative array
 	$cat_name=$rowcat['cat_name'];
 
-        $today_date=date('Y-m-d');
+        $today_date=date('Y-m-d');          //assign the date to today_date variable in the Y-M-D Format
 
 
 				
