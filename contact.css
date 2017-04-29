@@ -1,19 +1,23 @@
 /*CSS file to style contact.php file*/
+ /****styling the body ****/
 body 
 	{
 		margin: 0;
 		font-family: 'Open Sans', sans-serif;
 	}
+ /****styling the main from the top to bottom ****/
 .main 
 	{
 		float: left;
 		width: 100%;
 	}
+/****styling the headimg for the header image ****/
 .headimg
 	{
 		margin: auto;
 		max-width: 1200px;
 	}
+/****styling the imgbox for the header image ****/
 .imgbox
 	{
 		float: left;
@@ -24,11 +28,13 @@ body
 		float: left;
 		width: 100%;
 	}
+/****styling the midWrap class****/
 .midWrap 
 	{
 		max-width: 600px;
 		margin: auto;
 	}
+/****styling the wrap class****/
 .wrap 
 	{
 		float: left;
@@ -40,6 +46,7 @@ body
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
 	}
+/****styling the contactus unordered class****/
 .contactus
 	{
 		float: left;
