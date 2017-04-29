@@ -1,25 +1,30 @@
 /*CSS file to style help.php file*/
+ /****styling the body ****/
 body 
 	{
 		margin: 0;
 		font-family: 'Open Sans', sans-serif;
 	}
+ /****styling the main from the top to bottom ****/
 .main 
 	{
 		float: left;
 		width: 100%;
 	}
+/****styling the midWrap class****/
 .midWrap 
 	{
 		max-width: 1200px;
 		margin: auto;
 	}
+/****styling the wrapper class****/
 .wrapper 
 	{
 		float: left;
 		width: 96%;
 		margin: 20px 2%;
 	}
+/****styling the topwrap class****/
 .topwrap 
 	{
 		float: left;
@@ -50,12 +55,14 @@ body
 		text-align: center;
 		margin: auto;
 	}
+/****styling the bodyWrap class****/
 .bodyWrap 
 	{
 		float: left;
 		width: 100%;
 		margin: 30px 0;
 	}
+/****styling the searchbox****/
 .searchbox 
 	{
 		float: left;
@@ -112,6 +119,7 @@ form
 		line-height: 23px;
 		text-align: justify;
 	}
+/****styling the headings class****/
 .headings 
 	{
 		float: left;
@@ -229,6 +237,7 @@ form
 		height: 15px;
 		cursor: pointer;
 	}
+/****styling the details class****/
 .details 
 	{
 		float: left;
