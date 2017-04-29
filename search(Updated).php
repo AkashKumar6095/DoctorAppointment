@@ -1,9 +1,9 @@
-<?php include('header.php');?>
+<?php include('header.php');?>   //includes the header to the webpage
 <?php
-if(isset($_GET['pcode']) && isset($_GET['cid']))
+if(isset($_GET['pcode']) && isset($_GET['cid'])) //until the variable set of pcode and cid is not null
 {
-	$pcode=$_GET['pcode'];
-	$cid=$_GET['cid'];
+	$pcode=$_GET['pcode'];         //pcode gets the pin code of the location of the doctor/dentist being extracted
+	$cid=$_GET['cid'];             //cid gets the category id of the doctot/dentist being extracted
 }else
 {
 	exit();
@@ -12,24 +12,26 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 
 
 <?php
-								$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$cid'";
-								$rescat=mysqli_query($connection, $sqlcat);
-								
-								$rowcat=mysqli_fetch_assoc($rescat);
-								
-									$cat_id=$rowcat['cat_id'];
-									$cat_name=$rowcat['cat_name'];
-								?>
+$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$cid'"; //fetch all columns from doctor_category table where cat_id column is equal to cid
+$rescat=mysqli_query($connection, $sqlcat);     //executes queries
+$rowcat=mysqli_fetch_assoc($rescat);            //fetches the result row as an associative array
+$cat_id=$rowcat['cat_id'];
+$cat_name=$rowcat['cat_name'];
+?>
+<!--Custom CSS-->
 <link rel="stylesheet" type="text/css" href="css/index.css">
-
-
+        <!--mainWrap start-->
 	<div class="mainWrap">
+		<!--midWrap start-->
 		<div class="midWrap">
-			
+			<!--container start-->
 			<div class="container">
-				
+				<!--Results main wrap start-->
 				<div class="resultsMainWrap">
+					<!--Result Heading start-->
 					<div class="resultHeading">Search Result For <b>Pincode : <?php echo $pcode;?></b> and <b>Category : <?php echo $cat_name;?></b></div>
+					<!--Result Heading end-->
+					<!--Result wrap start-->
 					<div class="resultWrap">
 						<ul class="resultsHeadingWrap">
 							<li>Dr. Name</li>
@@ -40,16 +42,13 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 							<li class="location"></li> -->
 							<li class="hidden">Book An Appointment</li>
 						</ul>
-
-							
-						
 						<div class="" id="rTab<?php echo $cat_id;?>">
 							<ul class="resultsList">
-								<?php
-								$sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";
-								$res=mysqli_query($connection, $sql);
-								$result_count=mysqli_num_rows($res);
-								while($row=mysqli_fetch_assoc($res))
+						<?php
+						$sql="SELECT * FROM `doctors` WHERE `cat_id` = '$cid' AND `d_pin` = '$pcode'";  //fetch all columns from doctors table where cat_id variable are equal to cid and d_pin variable is equal to pcode
+						$res=mysqli_query($connection, $sql); //executes queries
+						$result_count=mysqli_num_rows($res);  //returns the number of rows as a result set
+						while($row=mysqli_fetch_assoc($res))  //until the result row acts as an associative array
 								{
 									
 									$d_id=$row['d_id'];
@@ -78,7 +77,7 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 								<?php }?>
 
 								<?php
-								if($result_count<=0)
+								if($result_count<=0)  //if result_count is less than or equal to 0
 								{
 									echo '<li>No Result Found</li>';
 								}
@@ -88,14 +87,17 @@ if(isset($_GET['pcode']) && isset($_GET['cid']))
 						
 						<!-- resultChange end -->
 						<div class="resultChange" id="rTab15">
-							<ul class="resultsList">
-								
+							<ul class="resultsList">	
 							</ul>
 						</div><!-- resultChange end -->
 					</div>
+					<!--Result wrap end-->
 				</div>
+				<!--Results main wrap end-->
 			</div>
+			<!--container end-->
 		</div>
+		<!--mid wrap end-->  
 	</div>
-
-<?php include('footer.php');?>
+        <!--main wrap end-->
+<?php include('footer.php');?>      //includes the footer to the webpage 
