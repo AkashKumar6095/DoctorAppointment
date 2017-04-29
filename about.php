@@ -1,5 +1,5 @@
 <!-----------------------------ABOUT US----------------------------------------->
-<?php include('header.php');?> 
+<?php include('header.php');?>                              //includes header to the webpage
 <!--Custom CSS-->
 <link rel="stylesheet" type="text/css" href="css/about.css">  
 <!--main start-->
@@ -25,7 +25,7 @@
 					<--Heading-->
 					<h2>Your Doctor is just a click away!!!</h2>
 				</div>
-				<!--marquee start-->
+				<!--marquee end-->
 				<!--body wrap start-->
 				<div class="bodyWrap">
 					<!--para start-->
@@ -108,4 +108,4 @@
 	 <!--mid wrap end-->
 	</div>
         <!--main end-->
-	<?php include('footer.php');?>  
+	<?php include('footer.php');?>    //includes footer to the webpage
