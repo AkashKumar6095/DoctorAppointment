@@ -1,9 +1,9 @@
 <!----------------------HELP----------------------------->
-<?php include('header.php');?>
+<?php include('header.php');?>  //includes the header to the webpage
 <?php
 if(isset($_GET['key'])) 
 {
-	$key=$_GET['key'];
+	$key=$_GET['key'];   
 }else
 {
 	$key="";
@@ -146,4 +146,4 @@ if(isset($_GET['key']))
 		$('.feedbackOverlay').hide();
 	});
 </script>
-	<?php include('footer.php');?>
+	<?php include('footer.php');?>          //includes the footer to the webpage
