@@ -108,4 +108,4 @@
 	 <!--mid wrap end-->
 	</div>
         <!--main end-->
-	<?php include('footer.php');?>    //includes footer to the webpage
+	<?php include('footer.php');?>                   //includes footer to the webpage
