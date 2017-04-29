@@ -4,13 +4,13 @@ if(isset($_GET['sid']))
 {
 	$sid=$_GET['sid'];           //assign value of variable
 
-	$sql="SELECT * FROM `slot_availability` WHERE `slot_id` = '$sid'";   //fetch all slots from slot_availability table where value of slot_id column are equal to s_id variable
+	$sql="SELECT * FROM `slot_availability` WHERE `slot_id` = '$sid'";   //fetch all columns from slot_availability table where value of slot_id column are equal to s_id variable
         $res=mysqli_query($connection, $sql);          ///executes queries
 	$row=mysqli_fetch_assoc($res);                 // Associative array
         $did=$row['doctor_id']; 
 
 
-	$sql="SELECT * FROM `doctors` WHERE `d_id` = '$did'";    //fetch all doctors and dentists from doctors table where value of d_id column are equal to did variable
+	$sql="SELECT * FROM `doctors` WHERE `d_id` = '$did'";    //fetch all columns from doctors table where value of d_id column are equal to did variable
 	$res=mysqli_query($connection, $sql);                    //executes queries
 	$row=mysqli_fetch_assoc($res);                           // Associative array
 								
@@ -29,7 +29,7 @@ if(isset($_GET['sid']))
 	$available_in_eve_to=$row['available_in_eve_to'];
 	$appoi_time_minuts=$row['appoi_time_minuts'];
 
-	$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'";   //fetch all doctors and dentists doctor_category from doctors table where value of catid_id column are equal to catid variable
+	$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'";   //fetch all columns from doctors table where value of catid_id column are equal to catid variable
 	$rescat=mysqli_query($connection, $sqlcat);                            //executes queries
 	$rowcat=mysqli_fetch_assoc($rescat);                                    // Associative array
         $cat_name=$rowcat['cat_name'];
@@ -40,6 +40,7 @@ if(isset($_GET['sid']))
 ?>
        <!-- Custom CSS-->
 	<link rel="stylesheet" type="text/css" href="css/appointment.css">
+      <!--Responsive Web Page-->
 	<link rel="stylesheet" type="text/css" href="css/mobile.css">
         <!--main start-->
 	<div class="main">
