@@ -1,19 +1,23 @@
 /*CSS file to style feedback.php file*/
+ /****styling the body ****/
 body 
 	{
 		font-family: arial;
 	}
+ /****styling the main2 class ****/
 .main2
 	{
 		float: left;
 		width: 100%;
 		background-color: rgba(0,0,0,0.5);
 	}
+ /****styling the midWrap2 class ****/
 .midWrap2 
 	{
 		max-width: 450px;
 		margin: auto;
 	}
+ /****styling the wrappers class ****/
 .wrappers
 	{
 		float: left;
@@ -58,6 +62,7 @@ body
 		width: 15px;
 		height: 15px;
 	}
+ /****styling the details class ****/
 .details 
 	{
 		float: left;
@@ -70,6 +75,7 @@ body
 		float: left;
 		width: 100%;
 	}
+ /****styling the formtype unordered class ****/
 .formtype 
 	{
 		float: left;
