@@ -1,5 +1,5 @@
-<!--Contact Us-->
-<?php include('header.php');?>
+<!---------------------------CONTACT US----------------------------------------->
+<?php include('header.php');?>                   //includes header to the webpage
 <!--Custom CSS-->
 <link rel="stylesheet" type="text/css" href="css/contact.css">
         <!--main start-->
@@ -111,4 +111,4 @@
 </script>
 
 
-<?php include('footer.php');?>
+<?php include('footer.php');?>          //includes footer to the webpage
