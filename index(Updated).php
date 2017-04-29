@@ -1,4 +1,4 @@
-<?php include('header.php');?>
+<?php include('header.php');?>         //includes header to the webpage
 <!--CUSTOM CSS-->
 <link rel="stylesheet" type="text/css" href="css/index.css">
         <!--mainWrap start-->
@@ -302,9 +302,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBD9b6rAoC3JPWIO9PwhKtq90snNSw38zI&callback=initMap"">
     </script>
-
-
-
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
 
-<?php include('footer.php');?>
+<?php include('footer.php');?>     //includes header to the webpage
