@@ -1,4 +1,4 @@
-<?php include('header.php');?>
+<?php include('header.php');?>     //includes header to the webpage
 <?php
 if(isset($_GET['did']))
 {
@@ -59,27 +59,31 @@ if(isset($_GET['did']))
 				        <!--details start-->
 					<div class="details">
 						<h2><?php echo $doctor_name;?></h2>
+				                <!--leftdetail start-->
 						<div class="leftdetail">
 							<p>Clinic</p>
 							<p>Address</p>
 							<p>Specialist in</p>
 							<p>Qualification</p>
 						</div>
+						<!--leftdetail end-->
+						<!--leftdetail2 start-->
 						<div class="leftdetail2">
-							<p>: <?php echo $d_clname; //display clinic name from the database
+							<p>: <?php echo $d_clname; //display clinic name stored in the database
 								?></p>
-							<p>: <?php echo $d_claddr; //display clinic address from the database
+							<p>: <?php echo $d_claddr; //display clinic address stored in the database
 								?></p>
-							<p>: <?php echo $cat_name; //display category name from the database
+							<p>: <?php echo $cat_name; //display category name stored in the database
 								?></p>
-							<p>: <?php echo $d_qual; //display doctor qualification from the database
+							<p>: <?php echo $d_qual; //display doctor qualification stored in the database
 								?></p>
 						</div>
+						<!--leftdetail2 end-->
 					</div>
 					<!--details end-->
 				</div>
 				
-				<?php include('monthly_attnd_rpt.php');?>
+				<?php include('monthly_attnd_rpt.php');?>      //includes calendar to the webpage
 				
 				</div>
 				<!--bodyWrap end-->
@@ -89,4 +93,4 @@ if(isset($_GET['did']))
 		<!--midWrap end-->
 	</div>
         <!--main end-->
-<?php include('footer.php');?>
+<?php include('footer.php');?>        //includes footer to the webpage
