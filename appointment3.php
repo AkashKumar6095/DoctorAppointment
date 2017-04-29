@@ -1,4 +1,4 @@
-<?php include('header.php');?>
+<?php include('header.php');?>      //include header to the webpage
 <?php
 if(isset($_GET['sid']))
 {
@@ -80,7 +80,7 @@ if(isset($_GET['sid']))
 				</div>
 				<!--Wrapper class start-->
 				<div class="Wrapper">
-			        <!--Form Starts and after it is submitted it is sent for processing to appointment3_submit.php file with the HTTP Post Method-->
+	<!----------------------Form Starts and after it is submitted it is sent for processing to appointment3_submit.php file with the HTTP Post Method------------------------------------->
 				<form action="appointment3_submit.php" method="post" accept-charset="utf-8">
 					<input type="hidden" name="sid" value="<?php echo $sid;?>">
 					<div class="formBox">
@@ -138,7 +138,7 @@ if(isset($_GET['sid']))
 						</ul>
 					</div>
 				</form>
-			        <!--Form ends-->		
+			        <!--------------------Form ends----------------------------------->		
 				</div>
 				<!--wrapper class end-->
 			</div>
@@ -147,6 +147,14 @@ if(isset($_GET['sid']))
 		<!--midWrap end-->
 	</div>
         <!--main end-->
+/* using JQUERY for the drop down menu for the "Type of Problem" field in the form above
+	   "category" is the id of the category which is shown in the drop down menu
+           "other_cat_label" is the id of the "Other" option 
+	   if the user selects the "Others" option in the drop down menu
+           "#other_cat_label" is active and a new label box opens where user can enter the text
+           if the user selects the category which is shown in the drop down menu
+            "#other_cat_label" is hidden
+*/
 <script type="text/javascript">
 	$("#category").change(function(){
 		if($(this).val()=="others")
@@ -159,4 +167,4 @@ if(isset($_GET['sid']))
 	});
 </script>
 
-<?php include('footer.php');?>
+<?php include('footer.php');?>  //include footer to the webpage
