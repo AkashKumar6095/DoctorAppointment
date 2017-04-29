@@ -1,7 +1,6 @@
-<link rel="stylesheet" type="text/css" href="<?php echo $siteroot;?>/css/calendar.css" media="all">
-
-
-					
+<!------------------------CALENDAR STARTS------------------------>
+<!--Custom CSS-->
+<link rel="stylesheet" type="text/css" href="<?php echo $siteroot;?>/css/calendar.css" media="all">					
 <?php 
 if(isset($_GET['month']))
 {
@@ -47,10 +46,13 @@ $pre_day=$numday-2;
 
 
 ?>
-
+            <!-- calenderSliderMain start--->
             <div class="calenderSliderMain" id="printWrap" style="margin-top: 20px;">
+		<!-- calenderSliderIneer start -->
                 <div class="calenderSliderIneer">
+	            <!-- calenderMainWrap start-->
                     <div class="calenderMainWrap">
+			<!--calenderHeading start-->
                         <div class="calenderHeading">
                         	<?php
 							if($month==12)
@@ -82,10 +84,7 @@ $pre_day=$numday-2;
                             <a href="<?php echo $siteroot;?>/appoint2.php?did=<?php echo $did;?>&month=<?php echo $nextmonth;?>&year=<?php echo $nextyear;?>" class="next_date"></a>
                             
                             </div>
-                             
-							
-                            
-                        </div>
+                           </div>
                         <div class="calenderWrap">
                             <ul class="calHeader">
                                 <li>Sun</li>
@@ -147,40 +146,32 @@ $pre_day=$numday-2;
 										{
 											$tempdate=$date;
 										}
-										$current_date="$year-$month-$date";
-										$tempdate=$year."-".$tempmonth."-".$tempdate;
-												
-										
-
-										$sql="SELECT * FROM `slot_availability` WHERE `doctor_id` = '$did' AND `date` = '$current_date' AND `status` = 'available'";
-										$res=mysqli_query($connection, $sql);
-										$slot_count=mysqli_num_rows($res);
-											?>
-											
-
-										<div class="event_label">
-											
-											
-											
-											<?php 
-											if($slot_count<=0)
-											{
-											}else
-											{
-												echo '<a href="'.$siteroot.'/lastpage.php?date='.$current_date.'&did='.$did.'"><span class="text"><i class="fa fa-user"></i> '.$slot_count.' Slots available</span></a>';
-											}
-											?>
-											
-										</div>
-                                        
-										
-									</li>
-								<?php }
-								}?>
-                                    
-                            </ul>
-                        </div>        
+				 $current_date="$year-$month-$date";  
+				 $tempdate=$year."-".$tempmonth."-".$tempdate;
+       $sql="SELECT * FROM `slot_availability` WHERE `doctor_id` = '$did'AND`date`='$current_date'AND`status`= 'available'"; //fetches all columns from the slot_availability table where alue of doctor_id are equal to did variable and date are equal to current_date variable and status ='available'
+				 $res=mysqli_query($connection, $sql); ////executes queries
+				 $slot_count=mysqli_num_rows($res);    //Associative array
+				 ?>
+						        <!--event_label start-->
+							<div class="event_label">
+							<?php 
+							if($slot_count<=0)
+							{
+							}else
+							{
+							  echo '<a href="'.$siteroot.'/lastpage.php?date='.$current_date.'&did='.$did.'"><span class="text"><i class="fa fa-user"></i> '.$slot_count.' Slots available</span></a>';
+						        }
+							?>
+							</div>
+							<!--event_label end-->
+                                                        </li>
+						        <?php }
+						         }?>
+                             </ul>
+                        </div>     
+			<!--calenderHeading end-->
                     </div>
-
+                    <!-- calenderMainWrap end -->
                 </div><!-- calenderSliderIneer end -->
             </div> <!-- calenderSliderMain end -->
+<!------------------------------CALENDAR ENDS------------------------->
