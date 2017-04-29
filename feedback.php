@@ -1,4 +1,4 @@
-<!--FEEDBACK-->
+<!--------------------------------------FEEDBACK STARTS-------------------------->
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@
 				</div>
 				<!--details starts-->
 				<div class="details">
-			<!--Form Starts and after it is submitted it is sent for processing to feeback_submit.php file with the HTTP Post Method-->
+<!---------------Form Starts and after it is submitted it is sent for processing to feeback_submit.php file with the HTTP Post Method-------------------->
 			<form action="feedback_submit.php" method="post" accept-charset="utf-8">
 			<ul class="formtype">
 			<li>
@@ -63,7 +63,7 @@
 			</li>
 		        </ul>
 			</form>
-			<!--Form Ends-->
+			<!-------------------------------FORM ENDS----------------------------->
 		        </div>
 			<!--details ends-->	
 	        </div>
@@ -74,3 +74,4 @@
 	<!--main2 starts-->
 </body>
 </html>
+<!---------------------------------------FEEDBACK STARTS---------------------------------------->
