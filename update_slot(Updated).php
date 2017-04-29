@@ -1,4 +1,4 @@
-<?php include('conn.php');?>
+<?php include('conn.php');?>     //include Database Connection
 <?php
 /*
 hit url
@@ -7,19 +7,19 @@ http://127.0.0.1/doctor2/update_slot.php?date=YYYY-MM-DD
 $date_g = @$_GET['date'];
 $d_id = @$_GET['d_id'];
 
-if(!empty($d_id))
+if(!empty($d_id))   //until the d_id variable is not empty
 {
-	$sql_doctor="SELECT * FROM `doctors` WHERE `d_id`='$d_id'";        //fetch all tables from doctors table where values in d_id table are equal to $d_id 
+	$sql_doctor="SELECT * FROM `doctors` WHERE `d_id`='$d_id'";    //fetch all columns from doctors table where values in d_id table are equal to $d_id 
 }else
 {
-	$sql_doctor="SELECT * FROM `doctors`";                       //fetch all tables from doctors table
+	$sql_doctor="SELECT * FROM `doctors`";                       //fetch all columns from doctors table
 }
 
 	$res_doctor=mysqli_query($connection, $sql_doctor);     //execute queries
-	while($row=mysqli_fetch_assoc($res_doctor))
+	while($row=mysqli_fetch_assoc($res_doctor))            //until row acts an associative array
 	{
 								
-									$did=$row['d_id'];
+									$did=$row['d_id'];     
 									$catid=$row['cat_id'];
 									$doctor_name=$row['d_name'];
 									$d_type=$row['d_type'];
@@ -36,12 +36,9 @@ if(!empty($d_id))
 
 									$sqlcat="SELECT * FROM `doctor_category` WHERE `cat_id` = '$catid'"; //fetch all tables from doctor_category table where values in cat_id table are equal to $catid
 									$rescat=mysqli_query($connection, $sqlcat);  //executes queries
-									$rowcat=mysqli_fetch_assoc($rescat);            //fetch result row as an associative array  
-									$cat_name=$rowcat['cat_name'];
-
-									
-
-
+									$rowcat=mysqli_fetch_assoc($rescat);  //fetch result row as an associative array  
+									$cat_name=$rowcat['cat_name'];  
+                                //Morning Slots For Doctor Appointment Start
 				$slot_sql_values="";
 				$temparr=explode(':', $available_in_morn_from);
 				$available_in_morn_from_hr=$temparr[0];
@@ -72,31 +69,24 @@ if(!empty($d_id))
 					{
 						$this_date=$date_g;
 					}
-
-				$sql="SELECT * FROM `slot_availability` WHERE `doctor_id` = '$did' AND `date` = '$this_date'";
-				$res=mysqli_query($connection, $sql);
-				$count=mysqli_num_rows($res);
-
+$sql="SELECT * FROM `slot_availability` WHERE `doctor_id` = '$did' AND `date` = '$this_date'"; //fetches all columns from slot_availability table where doctor_id variable are equal to did and date variable are equal to this_date(current date)
+                                $res=mysqli_query($connection, $sql);    //executes queries
+				$count=mysqli_num_rows($res);   //gets the total number of rows and stores it in count
 				if($count<=0)
-				{
-					
-					
-						$insert_slot_values="";
+				{ 
+					        $insert_slot_values="";
 						$i=$available_in_morn_from_hr;
 						$j=$available_in_morn_from_mn;
-						
-						
-
-						if($available_in_morn_to_mn>=$appoi_time_minuts)
+					        if($available_in_morn_to_mn>=$appoi_time_minuts)
 						{
 							$tomn=$available_in_morn_to_mn-$appoi_time_minuts;
 							$tohr=$available_in_morn_to_hr;
-						}else
+						}
+					        else
 						{
 							$tomn=$available_in_morn_to_mn+60-$appoi_time_minuts;
 							$tohr=$available_in_morn_to_hr-1;
 						}
-
 						while($i<$tohr || ($i<=$tohr && $j<=$tomn))
 						{
 							
@@ -178,12 +168,10 @@ if(!empty($d_id))
 
 							//echo "$i : $j<br>";
 						}
-
 						//echo $slot_sql_values;
-
-
-
-						///evening slots
+					//Morning Slots For Doctor Appointment End
+					
+					//Evening Slots For Doctor Appointment Start
 						$temparr=explode(':', $available_in_eve_from);
 						$available_in_eve_from_hr=$temparr[0];
 						if(count($temparr)==2)
@@ -256,12 +244,10 @@ if(!empty($d_id))
 								$j=$j%60;
 							}
 
-							$mntime=$j;
+							$mntime=$j;   //minutes 
 							
-							$hrtime=$i;
+							$hrtime=$i; //hours
 							
-
-
 							if($hrtime>12)
 							{
 								$hrtime=$hrtime-12;
@@ -299,11 +285,9 @@ if(!empty($d_id))
 
 							//echo "$i : $j<br>";
 						}
-				
+				                     //Evening Slots For Doctor Appointment End
 					///////////////
-
-				
-					echo $sql="INSERT INTO `slot_availability` (`doctor_id`, `date`, `timing`, `slot_shift`) VALUES $slot_sql_values";
+  echo $sql="INSERT INTO `slot_availability` (`doctor_id`, `date`, `timing`, `slot_shift`) VALUES $slot_sql_values";   //create the slot_availability table
 					mysqli_query($connection, $sql) or die(mysqli_error($connection));
 			}
 }
